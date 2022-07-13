@@ -1,0 +1,37 @@
+<div id = "img-div">
+     <%= image_tag 'empty-light-wall.jpg', alt: 'logo', id:'b-img' %>
+</div>
+<div id = "parent-div">
+    <div class = "logo-div">
+    <%= image_tag 'text.png', alt: 'logo', id:'dec' %>
+</div> 
+<div id = "form">
+<h1>Create Account</h1>
+    
+        <%= form_with(model: @user_data,  url: "/users", method: "POST") do |form| %>
+        <%= form.text_field :User_name, id:"fname",placeholder: "Your name" , class: "input", :required => true,pattern:"[A-Za-z]{3,16}",title:"minimum 3 char maximum 16 char"  %><br>
+        <%= form.telephone_field :Phone_number, id:"phoneno", placeholder: "Phone number" , class: "input", :required => true, pattern:"[6789][0-9]{9}", title:"Please enter valid phone number"%><br>
+        <%= form.email_field :Email, id:"mail" ,placeholder: "Email" , class: "input", :required => true, pattern:"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",title: "please include an '@' in the email address"%><br>
+        <%= form.password_field :Password, id:"pass" , placeholder: "Password", class: "input", :required => true ,maxlength:"15",pattern:"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]){8,}", title:"Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters "%><br>
+        <input type = "checkbox"  id = "check" onclick="showPassword()"><br>
+        <%= form.submit "Submit", id:"sub"%>
+        <% end %> 
+        <p>Already have an account?<a href="">Sign in</a></p>
+
+
+</div>
+</div>
+
+<script>
+    function showPassword(){
+        let check1 = document.getElementById("pass");
+       
+        if(check1.type == "password"){
+            check1.type = "text";
+        }
+        else{
+            check1.type = "password"
+        }
+    }
+</script>
+

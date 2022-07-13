@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id = "nav">
+        <div id = "logo-div">
+            <%= image_tag 'TEXT WHITE.png', alt: 'logo', id:'dec' %>
+        </div>
+        <div id = "search-div">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search" id = "search">
+                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div id = "profile-div">
+            <i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i>
+            <%# <span>Profile</span> %>
+        </div>
+        <div id = "cart-div">
+            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
+            
+        </div>
+
+    </div>
+      <div class="topnav">
+        <a class="active" href="index.html.erb">Home</a>
+        <a href="About.html">Antique</a>
+        <a href="Shop.html">Gift's</a>
+        <%# <a href="Gallery.html">Lamp&Lightning</a> %>
+        <a href="Gallery.html">wall Hanging</a>
+         <div class="dropdown">
+        <button class="dropbtn">Lamp&Lightning
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+      </div>
+   
+      <div id = "img">
+             <%= image_tag 'intro.jpg', alt: 'logo', id:'intro-img' %>
+      </div>
+      <p id = "p1">Live The Life You Imagined</p>
+      <p id = "p2">Lowest Prices Best Quality Shopping</p>
+      <button id = "s-button">Shop now</button>
+      <div id = "t-prodect">
+
+      </div>
+    <div id = "advantage">
+        <h1 id = "des">Why Shop With Us</h1>
+        <div class = "a-div" id="f-div">
+                <%= image_tag 'delivery-icon.png', alt: 'logo', class:'logo'  %>
+                <h2 style ="text-align: center;color:white">Fast Delivery</h2>
+        </div>
+        <div class = "a-div" id="">
+                <%= image_tag 'free.png', alt: 'logo', class:'logo'  %>
+                <h2 style ="text-align: center;color:white">Free Shiping</h2>
+        </div>
+        <div class = "a-div" id="">
+                <%= image_tag 'medal.png', alt: 'logo', class:'logo'  %>
+                <h2 style ="text-align: center;color:white">Best Quality</h2>
+        </div>
+    </div>
+    <div id ="container">
+        <h1 id = "about">Our Prodects</h1>
+        <div class = "img-div" id="p-div">
+                <%= image_tag 'decorative-light.jpg', alt: 'logo', class:'s-img'  %>
+                <span id = "s1">decorative light</span><span id = "s2">Rs.256</span>
+        </div>
+        <div class = "img-div">
+                <%= image_tag 'Wall-Hanging.jpg', alt: 'logo', class:'s-img' %>
+                <span id = "s1">Wall Hanging</span><span id = "s2">Rs.203</span>
+        </div>
+        <div class = "img-div">
+                <%= image_tag 'wall-painting.jpeg', alt: 'logo', class:'s-img' %>
+                <span id = "s1">wall painting</span><span id = "s2">Rs.154</span>
+        </div>
+        <div class = "img-div" id= "s-div">
+                <%= image_tag 'images.jpg', alt: 'logo', class:'s-img' %>
+                <span id = "s1">decorative light</span><span id = "s2">Rs.256</span>
+        </div>
+        <div class = "img-div">
+                <%= image_tag 'flower-pot.jpg', alt: 'logo', class:'s-img' %>
+                <span id = "s1">flower pot</span><span id = "s2">Rs.256</span>
+        </div>
+        <div class = "img-div">
+                <%= image_tag 'carpet.jpg', alt: 'logo', class:'s-img' %>
+                <span id = "s1">carpet</span><span id = "s2">Rs.256</span>
+        </div>
+    </div>
+</body>
+</html>
