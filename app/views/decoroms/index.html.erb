@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id = "home-body">
     <div id = "nav">
         <div id = "logo-div">
-            <%= image_tag 'TEXT WHITE.png', alt: 'logo', id:'dec' %>
+            <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
         </div>
         <div id = "search-div">
             <form action="/action_page.php">
@@ -19,9 +19,17 @@
                 <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
             </form>
         </div>
-        <div id = "profile-div">
-            <i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i>
-            <%# <span>Profile</span> %>
+        <div class="dropdown2">
+            <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+            <div class = "dropdown-content2">
+                <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                <a href="login.html" style="color:white">Login</a>
+                <%# <a href="#">Link 2</a>
+                <a href="#">Link 3</a> %>
+            </div>
+            
+            
         </div>
         <div id = "cart-div">
             <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
@@ -29,46 +37,57 @@
         </div>
 
     </div>
-      <div class="topnav">
-        <a class="active" href="index.html.erb">Home</a>
-        <a href="About.html">Antique</a>
-        <a href="Shop.html">Gift's</a>
+    <div class="topnav">
+        
+        <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
+        <a href="About.html" id = "nav-a">Antique</a>
+        <a href="Shop.html" id = "nav-a">Gift's</a>
         <%# <a href="Gallery.html">Lamp&Lightning</a> %>
-        <a href="Gallery.html">wall Hanging</a>
-         <div class="dropdown">
-        <button class="dropbtn">Lamp&Lightning
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
+      
+        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        
     </div>
-      </div>
-   
-      <div id = "img">
-             <%= image_tag 'intro.jpg', alt: 'logo', id:'intro-img' %>
-      </div>
-      <p id = "p1">Live The Life You Imagined</p>
-      <p id = "p2">Lowest Prices Best Quality Shopping</p>
-      <button id = "s-button">Shop now</button>
-      <div id = "t-prodect">
+    <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">wall clock</a>
+                <a href="#">Antique prodects</a>
+                <a href="#">Toys</a>
+            </div>
+    </div>
 
-      </div>
+    <div id = "img">
+             <%= image_tag 'intro.jpg', alt: 'logo', id:'intro-img' %>
+    </div>
+
+      
+    <div id = "t-prodect">
+            <p id = "p1">Live The Life You Imagined</p>
+            <p id = "p2">Lowest Prices Best Quality Shopping</p>
+            <button id = "s-button">Shop now</button>
+    </div>
     <div id = "advantage">
         <h1 id = "des">Why Shop With Us</h1>
         <div class = "a-div" id="f-div">
                 <%= image_tag 'delivery-icon.png', alt: 'logo', class:'logo'  %>
                 <h2 style ="text-align: center;color:white">Fast Delivery</h2>
+                <p style = "margin-left:13%; color:white;" >we are trying to deliver products to our </p>
+                <p  style = "margin-left:22%; color:white;">customers within two days.</p>
         </div>
         <div class = "a-div" id="">
                 <%= image_tag 'free.png', alt: 'logo', class:'logo'  %>
-                <h2 style ="text-align: center;color:white">Free Shiping</h2>
+                <h2 style ="text-align: center;color:white" >Free Shiping</h2>
+                <p style = "margin-left:13%; color:white;">we provide free shipping for minimum-</p>
+                <p style = "margin-left:32%; color:white;">price products.</p>
         </div>
         <div class = "a-div" id="">
                 <%= image_tag 'medal.png', alt: 'logo', class:'logo'  %>
                 <h2 style ="text-align: center;color:white">Best Quality</h2>
+                <p style = "margin-left:13%; color:white;">we are always trying to give the best </p>
+                <p style = "margin-left:32%; color:white;">quality products.</p>
+                
         </div>
     </div>
     <div id ="container">
@@ -98,5 +117,49 @@
                 <span id = "s1">carpet</span><span id = "s2">Rs.256</span>
         </div>
     </div>
+    <div id = "subscribe">
+        <h1 id = "sub-head">Subscribe To Get Discount Offers</h1>
+        <p id = "sub-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+        <p id = "sub-p2">tempor consectetur adipiscing </p>
+        <input type = "search" placeholder = "Email" id = "s-bar"><br>
+        <button type = "submit"   id = "sub-butt">Subscribe</button>
+    </div>
+    <div id = "review">
+        <h1 id = "c-review">Customer's Testimonial</h1>
+        <%= image_tag 'chithra_mam.png', alt: 'logo', id:'r-img' %>
+        <h4 id = "name">Chithra Muthukumaran</h4>
+        <p id = "type">Customer</p>
+        <p id = "review-p1">Dignissimos reprehenderit repellendus nobis error quibusdam? 
+        Atque animi sint unde quis reprehenderit, et, perspiciatis, 
+        debitis totam est deserunt eius officiis ipsum ducimus ad labore 
+        </p><p id = "review-p2">modi voluptatibus accusantium sapiente nam! Quaerat.</p>
+    </div>
+    <div id = "footer">
+        <div id = "address">
+             <%= image_tag 'text.png', alt: 'logo', id:'f-img' %>
+             <p>ADDRESS: 28 White tower, Street Name New York City, USA</p>
+             <p>TELEPHONE: +91 987 654 3210</p>
+             <p>EMAIL: yourmain@gmail.com</p>
+        </div>
+         <div id = "menu">
+            <h3>Menu</h3>
+             <p class = "footer-p">Home</p>
+             <p class = "footer-p">About</p>
+             <p class = "footer-p">Contact</p>
+             <p class = "footer-p">Blog</p>
+        </div>
+         <div id = "account">
+            <h3>Account</h3>
+             <p class = "footer-p">Account</p>
+             <p class = "footer-p">Checkout</p>
+             <p class = "footer-p">Login</p>
+             <p class = "footer-p">Register</p>
+        </div>
+    </div>
+    <footer>
+        <p>Author: Hege Refsnes</p>
+        <p><a href="mailto:hege@example.com">hege@example.com </a>,© 2021  All Rights Reserved By</p>
+    </footer>
+   
 </body>
 </html>

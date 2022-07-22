@@ -7,15 +7,17 @@ class UsersController < ApplicationController
     @user_data = User.new(user_details)
    
     if @user_data.save
-      redirect_to '/homepage'
+      redirect_to '/home'
       # render plain: "Successfull"
     else
-      render plain: "failed"
+      flash.now[:alert] = "Not created"
+      render "/signup"
     end
   end
-  
+
+  private
   def user_details
-    params.require(:user).permit(:user_name,:phone_number,:email,:password_digest)
+    params.require(:user).permit(:user_name,:phone_number,:email,:password)
   end
-  # private :user_details
+ 
 end

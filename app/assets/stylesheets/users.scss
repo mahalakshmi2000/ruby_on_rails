@@ -1,13 +1,28 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Mukta:wght@200;400&family=Playfair+Display:ital@0;1&family=Rubik&family=Signika+Negative&family=The+Nautigal&display=swap');
+
+#sign-up-body{
+    // background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0, 0, 0, 0.3)),url('empty-light-wall.jpg');
+    background-size: 100% 100%;
+    background-image: url("dark-wall-empty-room.jpg");
+    
+}
+#sign-dec{
+    width:90%;
+    margin-top: 35%;
+    margin-left: 10%;
+}
 #form{
     width:100%;
-    // border: 1px solid black;
-    height: 353px;
-    margin-top: 25px;
+    height: 380px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: 'Signika Negative', sans-serif;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     padding-top: 2px;
-    background-color: white;
+    background-color: rgba(241, 241, 241, 0.598);
 }
 body{
     position: relative;
@@ -16,27 +31,38 @@ body{
     margin-left: 9%;
     margin-top: 10px;
 }
-.logo-div{
-    width: 45%;
-    // border: 1px solid black;
-    margin: auto;
-    margin-top: 5%;
 
-}
-.input{
+#form .input{
     width:80%;
-    height: 25px;
+    height: 35px;
     margin-left: 26px;
     margin-top: 10px;
-    padding-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: white;
+    padding-left: 13px;
+    // opacity: 0;
 }
 #sub{
     margin-left: 105px;
     width: 30%;
     height: 37px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+    background-color: #F8935A;
     // margin-top: 10px;
 }
-h1{
+#sub:hover {
+    cursor: pointer;
+    background-color: #f28546;
+}
+#form h1{
+    color: rgb(54, 53, 53);
     text-align: center;
 }
 #img-div{
@@ -50,12 +76,18 @@ h1{
 }
 #parent-div{
     width:25%;
-    // border: 1px solid black;
+    //border: 1px solid black;
     height: 330px;
     position: absolute;
     top: 12%;
-    left: 40%;
+    left: 60%;
 }
-p{
+#sign-para{
     margin-left: 28px;
+    color: rgb(54, 53, 53);
+}
+#sign-para a{
+    text-decoration: none;
+    margin-left: 8px;
+    font-size: 17px
 }

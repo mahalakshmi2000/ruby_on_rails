@@ -1,0 +1,16 @@
+<body id = "add-body">
+<div id = "a-img">
+        <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'add-img' %>
+</div>
+<div id = "add-form">
+        <h1 id= "add-head">Add Products</h1>
+            
+                <%= form_with url:'add_products_path', method:"POST" do |form| %> 
+                    <%= form.text_field "add[product_name]" , id:"p-name",placeholder: "name", class:"p-input" %>
+                    <%= form.text_field "add[image_url]", id:"p-url", placeholder: "url", class:"p-input" %>
+                    <%= form.number_field "add[price]", id:"p-rate" ,placeholder: "rate", class:"p-input"%>
+                    <%= form.submit "Submit", id:"p-sub" %>
+                 <% end%>  
+</div>
+
+</body>
