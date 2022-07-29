@@ -40,10 +40,9 @@
         
         <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
         <a href="About.html" id = "nav-a">Antique</a>
-        <a href="Shop.html" id = "nav-a">Gift's</a>
-        <%# <a href="Gallery.html">Lamp&Lightning</a> %>
-      
-        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        <a href="Shop.html" id = "nav-a">Gifts</a>  
+        <a href="Gallery.html" id = "nav-a">Wall Hanging</a>
+        <a href="Shop.html" id = "nav-a">Ceramic</a> 
         
     </div>
     <div class="dropdown">
@@ -51,26 +50,63 @@
                 <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">wall clock</a>
-                <a href="#">Antique prodects</a>
+                <a href="/clocks">Wall Clocks</a>
+                <a href="/paintings">Wall Paintings</a>
                 <a href="#">Toys</a>
+                <a href="#">Carpets</a>
+                <a href="/lights">Lights</a>
+                <a href = "/statues">Statues</a>
+                <a href="#">Wall Stickers</a>
+                <a href="#">Candle Holders</a>
+                <a href="#">Shelf Hangings</a>
+
+
             </div>
     </div>
 
     <div id = "product-list">
+        <% @page_post.each do |blog| %>
+        <div id = "add-img-div">
+                <%= image_tag blog.image_url, id:"p-img" %>
+                <h4 id = "p-name"><%= blog.product_name %></h4>
+                <p id = "p-desc"><%= blog.description%></p>
+                <p id = "p-rate">Rs:<%= blog.price%></p>
+                <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
+                <button id ="buy">BUY NOW</button>
+                <button id = "cart-butt"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
+        </div>
+        <% end %>
+       
       
-        <% @showlist.each do |records|%>
-            <div id = "add-img-div">
-                
-                <%= image_tag records.image_url, id:"p-img" %>
-               <h3 id = "p-name"><%= records.product_name %></h3>
-               <p id = "p-desc">BS AMOR Artificial Fancy Wall Hanging Garland Money Plant Leaf Bail</p>
-               <h3 id = "p-rate">Rs:<%= records.price%></h3>
-               <button id ="buy">BUY NOW</button>
-               <button id = "cart-butt"><%= image_tag 'shopping-cart.png', alt: 'logo', id:'cart' %></button>
-            </div>
-        <%end%>
     </div> 
+   
+    <div id = "pagination"><%== pagy_nav(@pagy).html_safe %></div>
+    <div id = "shop-f">
+        <div id = "shop-address">
+             <%= image_tag 'text.png', alt: 'logo', id:'f-img' %>
+             <p>ADDRESS: 28 White tower, Street Name New York City, USA</p>
+             <p>TELEPHONE: +91 987 654 3210</p>
+             <p>EMAIL: yourmain@gmail.com</p>
+        </div>
+         <div id = "shop-menu">
+            <h3 class = "f-head">Menu</h3>
+             <p class = "footer-p">Home</p>
+             <p class = "footer-p">About</p>
+             <p class = "footer-p">Contact</p>
+             <p class = "footer-p">Blog</p>
+        </div>
+         <div id = "shop-account">
+            <h3 class = "f-head">Account</h3>
+             <p class = "footer-p">Account</p>
+             <p class = "footer-p">Checkout</p>
+             <p class = "footer-p">Login</p>
+             <p class = "footer-p">Register</p>
+        </div>
+    </div>
+    <footer>
+        <p id = "foot-para1">Email Id : mahalakshmiragaviragavi@gmail.com</p>
+        <p id = "foot-para2">© 2022  All Rights Reserved By  Mahalakshmi Palani</p>
+    </footer>
     
   </body>
 </html>

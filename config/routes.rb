@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get '/paintings', to:'categories#wallpainting'
+  get '/statues', to:'categories#statue'
+  get '/lights', to:'categories#light'
+  get '/clocks', to:'categories#wallclock'
+  
+  get 'blog_post/index'
   get 'list_products/shop'
   # get 'add_products/add'
   get  '/nav',to: 'decoroms#render_list'

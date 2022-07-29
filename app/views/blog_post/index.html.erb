@@ -1,0 +1,4 @@
+<% @blog_post.each do |blog| %>
+   <%= blog.title %>
+<% end %>
+<%== pagy_nav(@pagy).html_safe %>

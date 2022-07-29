@@ -23,6 +23,6 @@ class AddProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:add).permit(:product_name,:image_url,:price)
+    params.require(:add).permit(:product_name,:image_url,:price,:description,:actualprice,:categories)
   end
 end

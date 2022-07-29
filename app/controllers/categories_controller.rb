@@ -1,0 +1,23 @@
+class CategoriesController < ApplicationController
+  def category
+
+  end
+  
+  def wallpainting
+      @items = Add.where(categories: 'wall painting')
+      render 'categories/category', locals: {items:@items}
+              # controller/htmlpage
+  end
+  def statue
+    @items = Add.where(categories: 'statue')
+    render 'categories/category', locals: {items:@items}
+  end
+  def light
+    @items = Add.where(categories: 'light')
+    render 'categories/category', locals: {items:@items}
+  end
+  def wallclock
+    @items = Add.where(categories: 'wall clocks')
+    render 'categories/category', locals: {items:@items}
+  end
+end
