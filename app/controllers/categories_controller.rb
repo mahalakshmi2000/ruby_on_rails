@@ -20,4 +20,16 @@ class CategoriesController < ApplicationController
     @items = Add.where(categories: 'wall clocks')
     render 'categories/category', locals: {items:@items}
   end
+  def antique
+    @items = Add.where(categories: 'antique')
+    render 'categories/category', locals: {items:@items}
+  end
+  def candleholder
+    @items = Add.where(categories: 'candle holder')
+    render 'categories/category', locals: {items:@items}
+  end
+  def shelfhanging
+    @items = Add.where(categories: 'shelf hanging')
+    render 'categories/category', locals: {items:@items}
+  end
 end

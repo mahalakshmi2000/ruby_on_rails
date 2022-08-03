@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   def create    # Responsible for creating a session
     user = User.find_by(email: login_params[:email])
     if user && user.authenticate(login_params[:password])
+      session[:current_user_id] = user.id
       flash.now[:notice] = "Logged in successfully"
       redirect_to '/home'
       puts "worked correctly"  

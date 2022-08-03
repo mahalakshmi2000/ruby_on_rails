@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_28_051526) do
+ActiveRecord::Schema.define(version: 2022_08_03_093700) do
 
   create_table "action_text_rich_texts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,21 @@ ActiveRecord::Schema.define(version: 2022_07_28_051526) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "country"
+    t.bigint "pincode"
+    t.string "flat_no"
+    t.string "street"
+    t.string "landmark"
+    t.string "city"
+    t.string "state"
+    t.string "address_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "users_id", null: false
+    t.index ["users_id"], name: "index_addresses_on_users_id"
+  end
+
   create_table "adds", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "product_name"
     t.binary "image_url"
@@ -80,4 +95,5 @@ ActiveRecord::Schema.define(version: 2022_07_28_051526) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "users", column: "users_id"
 end

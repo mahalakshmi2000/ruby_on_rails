@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id =  "home-body">
+<div id = "nav">
+        <div id = "logo-div">
+            <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
+        </div>
+        <div id = "search-div">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search" id = "search">
+                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="dropdown2">
+            <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+            <div class = "dropdown-content2">
+                <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                <a href="login.html" style="color:white">Login</a>
+                <%# <a href="#">Link 2</a>
+                <a href="#">Link 3</a> %>
+            </div>
+            
+            
+        </div>
+        <div id = "cart-div">
+            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
+            
+        </div>
+
+    </div>
+    <div class="topnav">
+        
+        <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
+        <a href="/antiques" id = "nav-a">Antique</a>
+        <a href="#" id = "nav-a">Gifts</a>
+        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        
+    </div>
+    <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/clocks">Wall Clocks</a>
+                <a href="/paintings">Wall Paintings</a>
+                <a href="#">Toys</a>
+                <a href="#">Carpets</a>
+                <a href="/lights">Lights</a>
+                <a href = "/statues">Statues</a>
+                <a href="#">Wall Stickers</a>
+                <a href="/candleholders">Candle Holders</a>
+                <a href="/shelfhangings">Shelf Hangings</a>
+            </div>
+    </div>
+    
+    <form id = "address-form" action="/user_details" method="post" >
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+        <h2 class= "add-input">Add a new address</h2>
+
+        <label for="name" class= "add-input">Name</label><br>
+        <input type="text" name="name" id="cname" class= "add-input"/><br>
+        <label for="name" class= "add-input">phone number</label><br>
+        <input type="text" name="pnumber" id="pnum" class= "add-input"/><br>
+        <label for="name" class= "add-input">Country/Region</label><br>
+        <select name="address[country]" id="c-select" required class= "add-input">  <br>
+            <option>select</option>     
+            <option value="India">India</option>
+            <option value="India">Nepal</option>
+            <option value="india">Bangladesh</option>
+             <option value="india">Sri langa</option>
+        </select><br>
+        <label for="lname" class= "add-input">Pin code</label><br>
+        <input type="tel" name="address[pincode]" id="phone" class= "add-input"/><br>
+        <label for="lname" class= "add-input">Flat no,building,company,apartment</label><br>
+        <input type="text"  name="address[flat_no]" class= "add-input"><br>
+        <label for="lname" class= "add-input">Area,street,sector,village</label><br>
+        <input type="text"  name="address[street]" class= "add-input"><br>
+        <label for="lname" class= "add-input">Landmark</label><br>
+        <input type="text" name="address[landmark]" id="landmark" class= "add-input"/><br>
+        <label for="lname" class= "add-input">Town/City</label><br>
+        <input type="text" name="address[city]" id="city" class= "add-input"/><br>
+        <label for="lname" class= "add-input">State</label><br>
+        <select name="address[state]" id="c-select" required class= "add-input">  <br>
+            <option>select</option>     
+            <option value="India">Tamil nadu</option>
+            <option value="India">kerala</option>
+            <option value="india">Andhra pradesh</option>
+            <option value="india">Karnataka</option>
+        </select><br>
+        <label for="lname" class= "add-input">Address type</label><br>
+        <select name="address[address_type]" id="c-select" required class= "add-input">  <br>
+            <option>select</option>     
+            <option value="India">Home(7am - 9pm delivery)</option>
+            <option value="India">Office/Commercial(10pm - 6pm delivery)</option>
+            
+        </select><br>
+        <input type = "submit" id = "add-sub">
+       
+    </form>
+</body>
