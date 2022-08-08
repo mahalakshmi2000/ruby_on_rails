@@ -1,4 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id = "home-body">
+<div id = "nav">
+        <div id = "logo-div">
+            <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
+        </div>
+        <div id = "search-div">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search" id = "search">
+                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="dropdown2">
+            <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+            <div class = "dropdown-content2">
+                <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                <a href="login.html" style="color:white">Login</a>
+                <%# <a href="#">Link 2</a>
+                <a href="#">Link 3</a> %>
+            </div>
+            
+            
+        </div>
+        <div id = "cart-div">
+            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
+            
+        </div>
 
+    </div>
+    <div class="topnav">
+        
+        <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
+        <a href="About.html" id = "nav-a">Antique</a>
+        <a href="Shop.html" id = "nav-a">Gifts</a>
+        <%# <a href="Gallery.html">Lamp&Lightning</a> %>
+      
+        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        <div id = "address-div">
+               <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+               <p id = "address-para">select your address</p></a>   
+        </div>
+    </div>
+    <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/clocks">Wall Clocks</a>
+                <a href="/paintings">Wall Paintings</a>
+                <a href="#">Toys</a>
+                <a href="#">Carpets</a>
+                <a href="/lights">Lights</a>
+                <a href = "/statues">Statues</a>
+                <a href="#">Wall Stickers</a>
+                <a href="/candleholders">Candle Holders</a>
+                <a href="/shelfhangings">Shelf Hangings</a>
+            </div>
+            
+    </div>
 <div id = "product-list">
         <% items.each do |product| %>
         <div id = "add-img-div">
@@ -11,6 +71,5 @@
                 <button id = "cart-butt"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
         </div>
         <% end %>
-       
-      
-    </div> 
+</div> 
+</body>

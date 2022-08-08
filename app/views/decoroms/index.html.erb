@@ -7,6 +7,7 @@
     <title>Index</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%# <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> %>
 </head>
 <body id = "home-body">
     <div id = "nav">
@@ -45,7 +46,10 @@
         <%# <a href="Gallery.html">Lamp&Lightning</a> %>
       
         <a href="Gallery.html" id = "nav-a">wall Hanging</a>
-        
+        <div id = "address-div">
+               <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+               <p id = "address-para">select your address</p></a>   
+        </div>
     </div>
     <div class="dropdown">
             <button class="dropbtn">Categories
@@ -62,6 +66,7 @@
                 <a href="/candleholders">Candle Holders</a>
                 <a href="/shelfhangings">Shelf Hangings</a>
             </div>
+            
     </div>
 
     <div id = "img">
@@ -72,7 +77,7 @@
     <div id = "t-prodect">
             <p id = "p1">Live The Life You Imagined</p>
             <p id = "p2">Lowest Prices Best Quality Shopping</p>
-            <button id = "s-button">Shop now</button>
+            <button id = "s-button"><a href = "list_products/shop" style = "color:white">Shop now</a></button>
     </div>
     <div id = "advantage">
         <h1 id = "des">Why Shop With Us</h1>
@@ -97,7 +102,7 @@
         </div>
     </div>
     <div id ="container">
-        <h1 id = "about">Our Prodects</h1>
+        <h1 id = "about">Trending Prodects</h1>
         <div class = "img-div" id="p-div">
                 <%= image_tag 'decorative-light.jpg', alt: 'logo', class:'s-img'  %>
                 <span id = "s1">decorative light</span><span id = "s2">Rs.256</span>

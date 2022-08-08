@@ -42,7 +42,13 @@
         <a href="/antiques" id = "nav-a">Antique</a>
         <a href="#" id = "nav-a">Gifts</a>  
         <a href="#" id = "nav-a">Wall Hanging</a>
-        <a href="#" id = "nav-a">Ceramic</a> 
+        <%# <a href="#" id = "nav-a">Ceramic</a>  %>
+         <div id = "address-div">
+               <a href = "user_details/new" id = "add-anger"> 
+               <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+               <p id = "address-para">select your address</p>
+               </a>   
+        </div>
         
     </div>
     <div class="dropdown">
@@ -68,11 +74,11 @@
         <% @page_post.each do |blog| %>
         <div id = "add-img-div">
                 <%= image_tag blog.image_url, id:"p-img" %>
-                <h4 id = "p-name"><%= blog.product_name %></h4>
+                <h4 id = "p-name"  ><%= blog.product_name %></h4>
                 <p id = "p-desc"><%= blog.description%></p>
                 <p id = "p-rate">Rs:<%= blog.price%></p>
                 <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
-                <button id ="buy">BUY NOW</button>
+                <button  id ="buy" >Buy now</button>
                 <button id = "cart-butt"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
         </div>
         <% end %>
@@ -89,7 +95,7 @@
              <p>EMAIL: yourmain@gmail.com</p>
         </div>
          <div id = "shop-menu">
-            <h3 class = "f-head">Menu</h3>
+            <h3 class = "f-head" >Menu</h3>
              <p class = "footer-p">Home</p>
              <p class = "footer-p">About</p>
              <p class = "footer-p">Contact</p>
@@ -103,6 +109,7 @@
              <p class = "footer-p">Register</p>
         </div>
     </div>
+    
     <footer>
         <p id = "foot-para1">Email Id : mahalakshmiragaviragavi@gmail.com</p>
         <p id = "foot-para2">© 2022  All Rights Reserved By  Mahalakshmi Palani</p>
@@ -110,5 +117,12 @@
     
   </body>
 </html>
+<script>
+    function myFunction() {
+        var popup = document.getElementById("cart-butt");
+        // alert("I am an alert box!");
+        popup.classList.toggle(alert("I am an alert box!"));
+    }
+</script>
 
 

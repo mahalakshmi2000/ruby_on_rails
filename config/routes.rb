@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart_products/cart'
+  get 'payments/user_payment'
   # get '/address','user_details#address'
   get '/paintings', to:'categories#wallpainting'
   get '/statues', to:'categories#statue'

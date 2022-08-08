@@ -1,0 +1,90 @@
+// Place all the styles related to the payments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.s-payment{
+    width:80%;
+    height: 40px;
+    margin-top: 2%;
+}
+#payment-form{
+    // border: 1px solid black;
+    height: 560px;
+}
+#rupee{
+    margin-left: 5px;
+}
+#payment-head{
+    margin-left: 20%;
+}
+#rupee-font{
+    margin-left:3px;
+    font-size:22px;
+    margin-left: 6%;
+
+}
+#items-para{
+    font-size:16px;
+    margin-left:9%;
+    display:inline-block;
+}
+#items-butt{
+    font-size:16px;
+    display:inline-block;
+    margin-left:369px;
+    width:8%;
+}
+#price-para{
+    font-size:16px;
+    margin-left:9%;
+     display:inline-block;
+}
+#price-para2{
+    font-size:16px;
+    margin-left:370px;
+    display:inline-block;
+}
+#pay-butt{
+    margin-left:27%;
+    width:45%;
+    margin-top:5%;
+    height: 30px;
+}
+#payment-logo{
+    width:30%;
+    // border: 1px solid black;
+    margin-top: 6%;
+    margin-left: 7%;
+
+    
+}
+#logo-img{
+    width:100%;
+}
+#div2{
+    // border: 1px solid black;
+    // display: inline-block;
+    width:49%;
+    float: left;
+    margin-top: 5%;
+}
+#div1{
+    // border: 1px solid black;
+    // display: inline-block;
+    float: left;
+    width: 49%;
+}
+#ex-img{
+     height:250px;
+     width:43%;
+
+}
+.p-span{
+    margin-top:15px;
+    display: inline-block;
+}
+.span1{
+    margin-left: 8%;
+}
+.span2{
+    margin-left:5%;
+}

@@ -16,12 +16,29 @@
     // border: 1px solid black;
 
   }
+  #address-div{
+    // border: 1px solid black; */
+    display: inline-block;
+    margin-left: 45%;
+    /* margin-top: 5%; */
+    position: absolute;
+    top: 24%;
+    color: white;
+  }
+  #address-para{
+    display: inline-block;
+    font-size: 16px;
+  }
   #t-prodect{
     // border:1px solid black;
     width: 50%;
     float: right;
     margin-top: 18%;
 
+  }
+  #add-anger{
+    text-decoration: none;
+    color: white;
   }
   .dropdown .dropbtn {
     font-size: 18px;  
