@@ -1,7 +1,7 @@
 class DecoromsController < ApplicationController
-  def render_login
-    render "sessions/login"
-  end
+  # def render_login
+  #   render "sessions/login"
+  # end
   def render_signup
     render "users/signup"
   end
@@ -13,5 +13,12 @@ class DecoromsController < ApplicationController
    end
   def render_add
     render "add_products/add"
+  end
+  def index
+    product_list = TrendingProduct.new
+    @trending = TrendingProduct.all.map do |list|
+      list
+    end
+    @trending
   end
 end

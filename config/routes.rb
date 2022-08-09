@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'cart_products/cart'
-  get 'payments/user_payment'
+  get 'trending_products/index'
+  get '/cart_page',to: 'cart_products#cart'
+  get '/cart_page/:product_id',to: 'cart_products#create' 
+  get '/payments',to: 'payments#user_payment'
   # get '/address','user_details#address'
   get '/paintings', to:'categories#wallpainting'
   get '/statues', to:'categories#statue'
@@ -22,7 +24,7 @@ Rails.application.routes.draw do
   # get 'add_products/add'
   get  '/nav',to: 'decoroms#render_list'
   get '/home', to: 'decoroms#index'
-  get '/login', to: 'decoroms#render_login'
+  get '/login', to: 'sessions#login'
   get '/signup', to: 'decoroms#render_signup'
   # get '/product_form', to: 'add_products#add'
   post 'add_products_path', to: 'add_products#create'
@@ -32,5 +34,7 @@ Rails.application.routes.draw do
   post '/create_new_user', to: 'users#create'
   post '/create_session', to: 'sessions#create'
   # post  '/products', to: 'add_products#create'
+  post '/add_trending_products',to: 'trending_products#create'
   resources :user_details
+
 end

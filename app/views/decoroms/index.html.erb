@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <%# <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> %>
-</head>
-<body id = "home-body">
     <div id = "nav">
         <div id = "logo-div">
             <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
@@ -101,35 +89,23 @@
                 
         </div>
     </div>
-    <div id ="container">
+     <div id ="container">
         <h1 id = "about">Trending Prodects</h1>
-        <div class = "img-div" id="p-div">
-                <%= image_tag 'decorative-light.jpg', alt: 'logo', class:'s-img'  %>
-                <span id = "s1">decorative light</span><span id = "s2">Rs.256</span>
+        <div>
+        <% @trending.each do |list| %>
+       <div class = "trending-img">
+           <%= image_tag list.image_url, class:"t-img" %>
+            <h4 class = "t-name"  onclick = "myFunction()"><%= list.product_name %></h4>
+            <p class = "t-desc"><%= list.description%></p>
+            <p class = "t-rate">Rs:<%= list.price%></p><br>
+            <button  class ="buy-button" ><a href="#">Buy now</a></button>
+            <a href="/add" class = "cart-button"><%= image_tag 'Shopping-cart.png', alt: 'logo', class:'cart-img' %></a> 
         </div>
-        <div class = "img-div">
-                <%= image_tag 'Wall-Hanging.jpg', alt: 'logo', class:'s-img' %>
-                <span id = "s1">Wall Hanging</span><span id = "s2">Rs.203</span>
-        </div>
-        <div class = "img-div">
-                <%= image_tag 'wall-painting.jpeg', alt: 'logo', class:'s-img' %>
-                <span id = "s1">wall painting</span><span id = "s2">Rs.154</span>
-        </div>
-        <div class = "img-div" id= "s-div">
-                <%= image_tag 'images.jpg', alt: 'logo', class:'s-img' %>
-                <span id = "s1">decorative light</span><span id = "s2">Rs.256</span>
-        </div>
-        <div class = "img-div">
-                <%= image_tag 'flower-pot.jpg', alt: 'logo', class:'s-img' %>
-                <span id = "s1">flower pot</span><span id = "s2">Rs.256</span>
-        </div>
-        <div class = "img-div">
-                <%= image_tag 'carpet.jpg', alt: 'logo', class:'s-img' %>
-                <span id = "s1">carpet</span><span id = "s2">Rs.256</span>
+        <% end %>
         </div>
     </div>
     <div id = "subscribe">
-        <h1 id = "sub-head">Subscribe To Get Discount Offers</h1>
+        <h1 id = "sub-head" >Subscribe To Get Discount Offers</h1>
         <p id = "sub-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
         <p id = "sub-p2">tempor consectetur adipiscing </p>
         <input type = "search" placeholder = "Email" id = "s-bar"><br>
@@ -171,6 +147,3 @@
          <p id = "foot-para1">Email Id : mahalakshmiragaviragavi@gmail.com</p>
         <p id = "foot-para2">© 2022  All Rights Reserved By  Mahalakshmi Palani</p>
     </footer>
-   
-</body>
-</html>

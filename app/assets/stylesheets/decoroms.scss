@@ -1,6 +1,9 @@
 // Place all the styles related to the decoroms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+    z-index: 0;
+}
 #home-dec{
     width:100%;
     // margin-left: 2%;
@@ -117,14 +120,15 @@
     background-color: #548CA8;
     height: 53px;
     position:fixed;
-    z-index: 1;
+    top:0;
+    z-index: 100;
 }
 .topnav {
     overflow: hidden;
      background-color:#476072; 
      position: fixed;
-    //  z-index: ;
-     margin-top:53px;
+     z-index: 100;
+    top:9%;
      width:100%;
 }
 #home-body{
@@ -462,4 +466,82 @@ footer{
     margin-top: -16px;
     height: 150px;
     color:white;
+}
+.trending-img{
+    margin-top: 5%;
+  // border: 1px solid black;
+  box-shadow: 0 0 4px;
+  width: 25%;
+  margin-left: 6%;
+  border-radius: 12px;
+  height: 383px;
+  float: left;
+  position: relative;
+  z-index: -1;
+}
+.t-img{
+    width: 85%;
+    height: 220px;
+    margin-left: 23px;
+    margin-top: 23px;
+    border-radius: 13px;
+    
+}
+.t-name{
+    color:#413F42;
+    text-align: left;
+    margin-left: 9%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.t-desc{
+    margin-left: 9%;
+    font-size: 14px;
+    display: inline-block;
+    width: 62%;
+    // border: 1px solid black;
+    margin-top: 0;
+}
+.buy-button{
+    position: absolute;
+    width: 60%;
+    margin-left: 9%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    z-index: -1;
+    background-color: #6ECB63;
+    color: white;
+    bottom: 10px;
+}
+.cart-img{
+    padding-top: 3px;
+    width: 19px;
+    height: 19px;
+    
+}
+.cart-button{
+    margin-left: 228px;
+    width:16%;
+    height: 8%;
+    background:none;
+    border-radius: 5px;
+    border: none;
+    cursor:pointer;
+    background-color: coral;
+    position: absolute;
+    bottom: 10px;
+}
+.t-rate{
+    text-align: left;
+    margin-left: 21px;
+    color: #413F42;
+    display: inline-block;
+    // border: 1px solid black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    z-index: -1;
+    position: absolute;
+
+
 }

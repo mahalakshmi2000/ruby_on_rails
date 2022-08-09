@@ -1,0 +1,27 @@
+<body id = "add-body">
+<div id = "a-img">
+        <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'add-img' %>
+</div>
+<div id = "add-form">
+        <h1 id= "add-head">Add Products</h1>
+            
+                <%= form_with url:'/add_trending_products', method:"POST" do |form| %> 
+                    <%= form.text_field "trending_products[product_name]" ,placeholder: "name", class:"p-input" %>
+                    <%= form.text_field "trending_products[description]" ,placeholder: "description", class:"p-input" %>
+                    <%= form.text_field "trending_products[image_url]", placeholder: "url", class:"p-input" %>
+                    <%= form.number_field "trending_products[price]",placeholder: "rate", class:"p-input"%>
+                    <%# <%= form.number_field "add[actualprice]",placeholder: "actual_rate", class:"p-input"%> %>
+                     <select name="trending_products[category]" id="select" required>  
+                        <option>select</option>     
+                        <option value="Diwali">Diwali</option>
+                        <option value="Pongal">Pongal</option>
+                        <option value="Christmas">Christmas</option>
+                        <option value="Onam">Onam</option>
+                        <option value="Ramzan">Ramzan</option>
+                    </select>
+                    <%= form.submit "Submit", id:"p-sub" %>
+                   
+                 <% end%>  
+</div>
+
+</body>

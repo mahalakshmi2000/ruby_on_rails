@@ -1,11 +1,6 @@
 class AddProductsController < ApplicationController
   # before_action :ensure_user_logged_in
   def index
-    # @todo = Add.new
-    # @showlist = Add.all.map do |list|
-    #   list
-    # end
-    # @showlist
   end
 
   def create 

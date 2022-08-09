@@ -12,7 +12,7 @@
     height: 383px;
     float: left;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 #p-img{
     width: 85%;
@@ -87,6 +87,7 @@
     // border:1px solid black;
     margin-left: 5%;
     width: 90%;
+    z-index: -1;
 
 }
 .striked-price {
@@ -156,4 +157,7 @@ footer{
     // border: 1px solid black;
     margin-left: 47%;
     // background-color: blue;
+}
+body{
+    z-index: 0;
 }
