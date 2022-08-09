@@ -14,7 +14,7 @@ body{
     // position: absolute;
     position: fixed;
     top: 50px;
-    z-index: 2;
+    z-index: 100;
     width: 15%;
     // border: 1px solid black;
 
@@ -34,9 +34,12 @@ body{
   }
   #t-prodect{
     // border:1px solid black;
+    position: relative;
+    top: 250px;
     width: 50%;
     float: right;
-    margin-top: 18%;
+    z-index: -1;
+    // margin-top: 18%;
 
   }
   #add-anger{
@@ -121,14 +124,15 @@ body{
     height: 53px;
     position:fixed;
     top:0;
-    z-index: 100;
+    // z-index: 100;
+    z-index: 1;
 }
 .topnav {
     overflow: hidden;
      background-color:#476072; 
      position: fixed;
      z-index: 100;
-    top:9%;
+     top:9%;
      width:100%;
 }
 #home-body{
@@ -238,11 +242,15 @@ body{
 #img{
     width:40%;
     height:400px;
+    position: relative;
+    top: 180px;
+    z-index: -1;
     // border: 1px solid black;
-    margin-top: 5%;
+    // margin-top: 5%;
     margin-left: 5%;
     float: left;
-    margin-top:13%;
+    // margin-top:13%;
+    margin: 0;
 }
 #intro-img{
     width:100%;
@@ -276,6 +284,7 @@ body{
     font-size: 45px;
     margin-top: 55px;
     text-align: center;
+    // z-index: 0;
 }
 #subscribe{
     width:100%;
@@ -332,10 +341,10 @@ body{
     box-shadow: 0 0 5px;
     margin-left: 15px;
     // margin-top:15%;
-    display: inline-block;
+    // display: inline-block;
     background-color: #06283D;
     border-radius: 10px;
-    // position: relative;
+    position: relative;
     z-index: -1;
 }
 .logo{
@@ -350,21 +359,31 @@ body{
     margin-bottom: 5px;
 }
 #des{
+    position: absolute;
+    left: 35%;
+    top: -100px;
     font-size: 45px;
-    display: inline-block;
-    margin-left: -9%;
+    z-index: -1;
+    // display: inline-block;
 }
 #container{
     width: 100%;
+    position: relative;
+    top: 250px;
     height: 300px;
+    z-index: -1;
 }
 #advantage{
-    margin-top: 42%;
-   
+    width: 100%;
+    position: relative;
+    // background-color: #6ECB63;
+    top: 250px;
+    display: flex;
+
 }
 #f-div{
-     margin-left: 9%;
-
+    //  margin-left: 9%;
+    margin-left: 7%;
 }
 #p-div{
     margin-left: 11%;
@@ -518,6 +537,8 @@ footer{
     padding-top: 3px;
     width: 19px;
     height: 19px;
+    margin-left: 15px;
+    margin-top: 5px;
     
 }
 .cart-button{
