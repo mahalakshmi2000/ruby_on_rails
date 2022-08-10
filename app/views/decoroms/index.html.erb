@@ -8,6 +8,11 @@
                 <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
             </form>
         </div>
+        
+        <div id = "cart-div">
+            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
+            
+        </div>
         <div class="dropdown2">
             <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
             <div class = "dropdown-content2">
@@ -20,13 +25,10 @@
             
             
         </div>
-        <div id = "cart-div">
-            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
-            
-        </div>
 
     </div>
-    <div class="topnav">
+    
+    <div class="topnav" >
         
         <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
         <a href="About.html" id = "nav-a">Antique</a>
@@ -35,7 +37,7 @@
       
         <a href="Gallery.html" id = "nav-a">wall Hanging</a>
         <div id = "address-div">
-               <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+               <a href = "/address" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
                <p id = "address-para">select your address</p></a>   
         </div>
     </div>
@@ -91,7 +93,7 @@
     </div>
      <div id ="container">
         <h1 id = "about">Trending Prodects</h1>
-        <div>
+        
         <% @trending.each do |list| %>
        <div class = "trending-img">
            <%= image_tag list.image_url, class:"t-img" %>
@@ -102,7 +104,7 @@
             <a href="/add" class = "cart-button"><%= image_tag 'Shopping-cart.png', alt: 'logo', class:'cart-img' %></a> 
         </div>
         <% end %>
-        </div>
+        
     </div>
     <div id = "subscribe">
         <h1 id = "sub-head" >Subscribe To Get Discount Offers</h1>

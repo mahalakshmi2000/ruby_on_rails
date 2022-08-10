@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'trending_products/index'
+  get 'trending_products_form',to:'trending_products#index'
   get '/cart_page',to: 'cart_products#cart'
   get '/cart_page/:product_id',to: 'cart_products#create' 
   get '/payments',to: 'payments#user_payment'
-  # get '/address','user_details#address'
+   get '/address',to:'user_details#new'
   get '/paintings', to:'categories#wallpainting'
   get '/statues', to:'categories#statue'
   get '/lights', to:'categories#light'
@@ -20,13 +20,11 @@ Rails.application.routes.draw do
 
 
   get 'blog_post/index'
-  get 'list_products/shop'
-  # get 'add_products/add'
-  get  '/nav',to: 'decoroms#render_list'
+  get 'products_page',to:'list_products#shop'
+  # get  '/nav',to: 'decoroms#render_list'
   get '/home', to: 'decoroms#index'
   get '/login', to: 'sessions#login'
-  get '/signup', to: 'decoroms#render_signup'
-  # get '/product_form', to: 'add_products#add'
+  get '/signup', to: "users#signup"
   post 'add_products_path', to: 'add_products#create'
   resources :add_products
   
