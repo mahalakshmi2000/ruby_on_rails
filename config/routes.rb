@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   get 'trending_products_form', to: 'trending_products#index'
   get '/cart_page', to: 'cart_products#cart'
-  get '/cart_page/:product_id', to: 'cart_products#create'
+  get '/cart_page/:product_id', to: 'list_products#cart_items'
   get '/payments', to: 'payments#user_payment'
   get '/address', to: 'user_details#new'
   get '/paintings', to: 'categories#wallpainting'

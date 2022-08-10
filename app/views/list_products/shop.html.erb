@@ -81,7 +81,7 @@
         <p id = "p-rate">Rs:<%= blog.price%></p>
         <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
         <a href="#"><button  id ="buy" >Buy now</button></a>
-        <button id = "cart-butt" onclick="myFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button> 
+        <button id = "cart-butt" ><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
     </div>
     <% end %>
     </div> 

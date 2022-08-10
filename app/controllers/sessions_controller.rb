@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       redirect_to '/home'
       puts 'worked correctly'
     else
-      flash.now[:alert] = 'Invalid email/password combination'
+      flash[:error] = 'Invalid email/password combination'
+
       redirect_to '/login'
     end
   end

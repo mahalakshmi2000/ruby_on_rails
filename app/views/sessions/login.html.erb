@@ -18,13 +18,13 @@
                 <%= form.submit "Submit", id:"sub"%>
                 <p id = "l-para">You haven't an account?<a href="signup.html">Sign up</a></p>
                 <% end %> 
-                <% flash.each do |type, msg| %>
-                <div class = "flash-msg">
-                    <%= msg %>
-                </div>
-        <% end %>
+        
 
         </div>
+    <% if flash[:error]%>
+            
+          <p class="flash-msg"><%= flash[:error] %></p>  
+            <% end %>
 
     </div>
 </body>
