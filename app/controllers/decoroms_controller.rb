@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DecoromsController < ApplicationController
   # def render_login
   #   render "sessions/login"

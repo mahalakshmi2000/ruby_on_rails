@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ListProductsController < ApplicationController
   # include Pagy::Backend
   def shop
@@ -6,7 +8,7 @@ class ListProductsController < ApplicationController
       list
     end
     @showlist
-    
-     @pagy,@page_post = pagy(Add.all, items: 9)
+
+    @pagy, @page_post = pagy(Add.all, items: 9)
   end
 end
