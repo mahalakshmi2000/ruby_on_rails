@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body id = "home-body">
-<div id = "nav">
+    <div id = "nav">
         <div id = "logo-div">
             <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
         </div>
@@ -24,20 +24,44 @@
                <p id = "address-para">select your address</p></a>   
         </div>
     </div>
-        <div class="dropdown2">
-            <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
-            <div class = "dropdown-content2">
-                <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
-                <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
-                <a href="login.html" style="color:white">Login</a>
-                <%# <a href="#">Link 2</a>
-                <a href="#">Link 3</a> %>
-            </div>    
-        </div>
-        <div id = "cart-div">
-           <a href = "/cart_page"> <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
-            
-        </div>
+       <%if session[:current_user_id] == nil %>
+            <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                <div class = "dropdown-content2">
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="/login" style="color:white">Login</a>
+                    <a href="/signup" style="color:white">SignUp</a>
+                    
+                </div>
+                
+                
+            </div>
+        <%else%>
+                <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                  <% logged_user = User.find(session[:current_user_id]) %>
+                    <label class="user-name" style="color:white" ><%= logged_user["user_name"] %></label>
+                <div class = "dropdown-content2">
+                    
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="#" style="color:white">Profile</a>
+                    <a href='/logout' style="color:white">Logout</a>
+                  
+                </div>
+                
+                
+            </div>
+        <%end%>
 
     </div>
     

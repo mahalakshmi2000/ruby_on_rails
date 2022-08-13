@@ -16,6 +16,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    session[:current_user_id] = nil
+    # @current_user = nil
+    redirect_to root_path
+  end
+
   private
 
   def login_params
