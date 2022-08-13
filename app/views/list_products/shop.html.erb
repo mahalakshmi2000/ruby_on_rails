@@ -13,11 +13,12 @@
             <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
         </div>
         <div id = "search-div">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search" id = "search">
+            <form  role="search" action="/search">
+                <input type="text" placeholder="Search.."  id = "search" name="q" aria-label="Search">
                 <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
             </form>
         </div>
+        
         <div class="topnav">
         
             <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
@@ -46,7 +47,7 @@
             
         </div>
         <div id = "cart-div">
-            <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i>
+          <a href="/cart_page">  <i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
             
         </div>
 

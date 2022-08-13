@@ -1,0 +1,15 @@
+   <div id = "product-list">
+      
+    <% @products1.each do |product| %>
+    <div id = "add-img-div">
+        <%= image_tag product.image_url, id:"p-img" %>
+        <h4 id = "p-name"  onclick = "myFunction()"><%= product.product_name %></h4>
+        <p id = "p-desc"><%= product.description%></p>
+        <p id = "p-rate">Rs:<%= product.price%></p>
+        <span class="striked-price"><s><%= product.actualprice%></s></span><br>
+        <a href="#"><button  id ="buy" >Buy now</button></a>
+        <button id = "cart-butt" ><a href="/cart_page/<%= product['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+    </div>
+    <% end %>
+</div>  
+<h1>hello</h1>

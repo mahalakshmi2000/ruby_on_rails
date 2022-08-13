@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get '/search', to: 'list_products#search'
   get 'trending_products_form', to: 'trending_products#index'
   get '/cart_page', to: 'cart_products#cart'
   get '/cart_page/:product_id', to: 'list_products#cart_items'

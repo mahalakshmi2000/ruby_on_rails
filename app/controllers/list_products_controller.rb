@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ListProductsController < ApplicationController
-  # include Pagy::Backend
+  include Pagy::Backend
   def shop
     product_list = Add.new
     @showlist = Add.all.map do |list|
@@ -27,5 +27,9 @@ class ListProductsController < ApplicationController
       # render plain: true
 
     end
+  end
+
+  def search
+    @products1 = Add.where('description Like ?', "%#{params[:q]}%")
   end
 end
