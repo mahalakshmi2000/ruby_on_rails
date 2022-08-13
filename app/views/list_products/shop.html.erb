@@ -77,12 +77,12 @@
     <% @page_post.each do |blog| %>
     <div id = "add-img-div">
         <%= image_tag blog.image_url, id:"p-img" %>
-        <h4 id = "p-name"  onclick = "myFunction()"><%= blog.product_name %></h4>
+        <h4 id = "p-name"  ><%= blog.product_name %></h4>
         <p id = "p-desc"><%= blog.description%></p>
         <p id = "p-rate">Rs:<%= blog.price%></p>
         <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
         <a href="#"><button  id ="buy" >Buy now</button></a>
-        <button id = "cart-butt" ><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+        <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
     </div>
     <% end %>
     </div> 
@@ -120,9 +120,7 @@
 </html>
 <script>
     function myFunction() {
-        // var popup = document.getElementById("cart-butt");
-         alert("I am an alert box!");
-        // popup.classList.toggle(alert("I am an alert box!"));
+        alert(" Item added to the cart ");
     }
 </script>
 
