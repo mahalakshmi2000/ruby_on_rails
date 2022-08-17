@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_808_123_105) do
+ActiveRecord::Schema.define(version: 20_220_816_141_506) do
   create_table 'action_text_rich_texts', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
     t.string 'name', null: false
     t.text 'body', size: :long
@@ -100,6 +100,16 @@ ActiveRecord::Schema.define(version: 20_220_808_123_105) do
     t.bigint 'price'
     t.string 'description'
     t.string 'category'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
+
+  create_table 'user_addresses', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.bigint 'pincode'
+    t.string 'landmark'
+    t.string 'address'
+    t.string 'city'
+    t.string 'state'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end

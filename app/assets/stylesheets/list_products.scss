@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#add-img-div{
+.add-img-div{
       margin-top: 5%;
     // border: 1px solid black;
     box-shadow: 0 0 4px;
@@ -13,6 +13,7 @@
     float: left;
     position: relative;
     z-index: 0;
+    cursor: pointer;
 }
 #p-img{
     width: 85%;

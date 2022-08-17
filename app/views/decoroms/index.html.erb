@@ -1,3 +1,5 @@
+<%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> %>
+<%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> %>
     <div id = "nav">
         <div id = "logo-div">
             <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
@@ -10,15 +12,15 @@
         </div>
         <div class="topnav" >
         
-        <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
-        <a href="About.html" id = "nav-a">Antique</a>
-        <a href="Shop.html" id = "nav-a">Gifts</a>
+        <a class="active" href="#" style = "margin-left:12%" id = "nav-a">Home</a>
+        <a href="#" id = "nav-a">Antique</a>
+        <a href="#" id = "nav-a">Gifts</a>
         <%# <a href="Gallery.html">Lamp&Lightning</a> %>
       
-        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        <a href="#" id = "nav-a">wall Hanging</a>
         <div id = "address-div">
-               <a href = "/address" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
-               <p id = "address-para">select your address</p></a>   
+               <%# <a href = "/address" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i> %>
+               <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>   
         </div>
     </div>
         <%if session[:current_user_id] == nil %>
@@ -32,7 +34,7 @@
                     <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
                     <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
                     <a href="/login" style="color:white">Login</a>
-                    <a href="/signup" style="color:white">SignUp</a>
+                    <a href="/users/new" style="color:white">SignUp</a>
                     
                 </div>
                 

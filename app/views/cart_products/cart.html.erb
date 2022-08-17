@@ -8,39 +8,68 @@
         <%= image_tag cart_product.image_url, id:"cart-img" %>
        <p id = "cart-pname"> <%= cart_product.product_name %></p>
        
-        <button class = "minus" id ="minus_<%= cart_product.id%>" onclick="minus(<%= i%>)" value="1">-</button>
+        <button class = "minus" id ="minus_<%= cart_product.id%>" onclick="minus(<%= i%>,<%= cart_product.price  %>)" value="1">-</button>
         <input id = "number<%= i%>"  value="1"class="para2">
         </input>
         <%# <button id = "number">1</button> %>
-        <button class = "plus" onclick="plus(<%= i%>)" id ="minus_<%= cart_product.id%>">+</button>
-        <p id = "cart-price">Rs:<%= cart_product.price  %></p>
+        <button class = "plus" onclick="plus(<%= i%>,<%= cart_product.price  %>)" id ="minus_<%= cart_product.id%>">+</button>
+        <p id = "cart-price<%= i%>" class="price-para"><%= cart_product.price  %></p>
         <button id = "delete-butt"><i class="fa fa-trash-o" style="font-size:30px; color:#8d8585"></i></button>
-        <button id = "buy-button">PROCCED TO PAY</button>
+        <button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
     </div>
     <%end%>
    
 </div>
 </body>
 <script>
-    function plus(inputId) {
-        let getattribute = event.target.value;
+    function plus(inputId,productValue) {
+       
+        
         let value1 = document.getElementById("number"+inputId).value;
         console.log(value1);
-        let typecasting = JSON.parse(value1);
+        let typecasting = parseInt(value1);
         let qtyValue = typecasting + 1;
         if (qtyValue != null) {
             document.getElementById("number"+inputId).value = qtyValue;
          }
+         let total = productValue * qtyValue;
+         console.log(total);
+        if (total != null) {
+            document.getElementById("cart-price"+inputId).innerText = total;
+        }
     }
-      function minus(inputId) {
+      function minus(inputId,productValue) {
         let getattribute = event.target.value;
         let value1 = document.getElementById("number"+inputId).value;
         console.log(value1);
-        let typecasting = JSON.parse(value1);
+        let typecasting = parseInt(value1);
         let qtyValue = value1>1 ?typecasting -1:1;
         if (qtyValue != null) {
             document.getElementById("number"+inputId).value = qtyValue;
         }
-    }
+         let total = productValue * qtyValue;
+         if (total != null) {
+            document.getElementById("cart-price"+inputId).innerText = total;
+        }
 
+
+    }
+    let paymentArray = [];
+    function addPayment(q){
+        let quantity = document.getElementById("number"+q).value;
+        let totalprice = document.getElementById("cart-price"+q).innerText;
+        console.log(quantity);
+        console.log(totalprice);
+        let list = {
+      qty: quantity,
+      total: totalprice
+    };
+    paymentArray.push(list);
+    console.log(paymentArray);
+    let addValue = JSON.stringify(paymentArray);
+    localStorage.setItem("items", addValue);
+    }
+    
+    
 </script>
+

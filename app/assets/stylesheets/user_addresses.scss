@@ -1,0 +1,58 @@
+// Place all the styles related to the User_addresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#edit{
+    // background-color: cadetblue;
+    margin-top: 27px;
+    color: white;
+}
+#show-address{
+    // border: 1px solid black;
+    margin-top: 10%;
+}
+#delete{
+    // background-color: cadetblue;
+    margin-top: 27px;
+    color: white;
+    
+}
+#new-address-div{
+    border: 1px solid black;
+    width:30%;
+    
+}
+#address-form-div{
+    // border: 1px solid black;
+    width: 30%;
+    margin-top: 3%;
+    // margin: auto;
+    // height:350px;
+}
+.a-input{
+    margin-left: 30%;
+    display: flow-root;
+    width: 235px;
+    margin-top: 15px;
+
+}
+#a-lable1{
+    position: absolute;
+    margin-left: 2%;
+}
+#a-lable2{
+    position: absolute;
+    margin-left: 2%;
+}
+#a-lable3{
+    position: absolute;
+    margin-left: 2%;
+}
+#a-lable4{
+    position: absolute;
+    margin-left: 2%;
+}
+#action{
+    margin-top: 5%;
+    margin-left: 39%;
+}

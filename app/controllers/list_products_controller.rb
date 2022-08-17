@@ -21,10 +21,21 @@ class ListProductsController < ApplicationController
     else
       product_id = params[:product_id]
       puts "product_id is #{product_id}"
-      @cart_items = Cart.create(add_id: product_id)
-      redirect_to '/products_page'
+      temp = Cart.select('add_id')
+      p temp
+      count = 1
+      count += 1
+      if temp
 
-      # render plain: true
+        # puts "count #{count}"
+        # flash.flash[:error]  = 'already created'
+        # redirect_to '/products_page'
+        render plain: 'Failed to create account!'
+      else
+        @cart_items = Cart.create(add_id: product_id)
+        redirect_to '/cart_page'
+        # render plain: "success"
+      end
 
     end
   end

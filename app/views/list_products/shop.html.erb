@@ -27,10 +27,11 @@
             <a href="#" id = "nav-a">Wall Hanging</a>
             <%# <a href="#" id = "nav-a">Ceramic</a>  %>
              <div id = "address-div">
-                   <a href = "user_details/new" id = "add-anger"> 
+                   <%# <a href = "user_details/new" id = "add-anger"> 
                    <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
-                   <p id = "address-para">select your address</p>
-                   </a>   
+                   <p id = "address-para">Become a seller</p>
+                   </a>    %>
+                   <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>
             </div>
             
         </div>
@@ -45,7 +46,7 @@
                     <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
                     <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
                     <a href="/login" style="color:white">Login</a>
-                    <a href="/signup" style="color:white">SignUp</a>
+                    <a href="/users/new" style="color:white">SignUp</a>
                     
                 </div>
                 
@@ -95,20 +96,23 @@
     </div>
 
     <div id = "product-list">
+  
       
-    <% @page_post.each do |blog| %>
-    <div id = "add-img-div">
+    <% @page_post.each.with_index do |blog,j| %>
+    <div id = "add-img-div_<%= blog.id%> " onclick="view(<%= j%>)" class = "add-img-div">
         <%= image_tag blog.image_url, id:"p-img" %>
         <h4 id = "p-name"  ><%= blog.product_name %></h4>
         <p id = "p-desc"><%= blog.description%></p>
         <p id = "p-rate">Rs:<%= blog.price%></p>
         <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
-        <a href="#"><button  id ="buy" >Buy now</button></a>
+        <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
         <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
     </div>
     <% end %>
     </div> 
-   
+       <% if flash[:error]%>
+            <p class="flash-msg" style="color:red;"><%= flash[:error] %></p>  
+    <% end %>
     <div id = "pagination"><%= pagy_nav(@pagy).html_safe %> </div>
     <div id = "shop-f">
         <div id = "shop-address">
@@ -144,8 +148,10 @@
     function myFunction() {
         alert(" Item added to the cart ");
     }
+    function buyFuntion(){
+        alert("select your address")
+    }
 </script>
-
 
 
 

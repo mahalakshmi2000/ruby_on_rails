@@ -62,42 +62,35 @@
         <h2 class= "add-input">Add a new address</h2>
 
         <label for="name" class= "add-input">Name</label><br>
-        <input type="text" name="name" id="cname" class= "add-input"/><br>
-        <label for="name" class= "add-input">phone number</label><br>
+        <input type="text" name="name" id="cname" class= "add-input"/>
+        <label for="name" class= "add-input" id = "phonenum">phone number</label>
         <input type="text" name="pnumber" id="pnum" class= "add-input"/><br>
-        <label for="name" class= "add-input">Country/Region</label><br>
-        <select name="address[country]" id="c-select" required class= "add-input">  <br>
-            <option>select</option>     
-            <option value="India">India</option>
-            <option value="India">Nepal</option>
-            <option value="india">Bangladesh</option>
-             <option value="india">Sri langa</option>
-        </select><br>
-        <label for="lname" class= "add-input">Pin code</label><br>
-        <input type="tel" name="address[pincode]" id="phone" class= "add-input"/><br>
-        <label for="lname" class= "add-input">Flat no,building,company,apartment</label><br>
-        <input type="text"  name="address[flat_no]" class= "add-input"><br>
-        <label for="lname" class= "add-input">Area,street,sector,village</label><br>
-        <input type="text"  name="address[street]" class= "add-input"><br>
-        <label for="lname" class= "add-input">Landmark</label><br>
-        <input type="text" name="address[landmark]" id="landmark" class= "add-input"/><br>
+         <label for="lname" class= "add-input" id="pincode">Pin code</label><br>
+        <input type="tel" name="address[pincode]" id="phone" class= "add-input"/>
+        <label for="lname" class= "add-input" id = "landmark">Landmark</label>
+        <input type="text" name="address[landmark]"  class= "add-input"/><br>
+        <label for="lname" class= "add-input">Address</label><br>
+        <input type="tel" name="address[pincode]" id="add-address" class= "add-input" placeholder="Area and street"/><br>
+        
+      
+        
         <label for="lname" class= "add-input">Town/City</label><br>
-        <input type="text" name="address[city]" id="city" class= "add-input"/><br>
-        <label for="lname" class= "add-input">State</label><br>
-        <select name="address[state]" id="c-select" required class= "add-input">  <br>
+        <input type="text" name="address[city]" id="city" class= "add-input"/>
+        <label for="lname" class= "add-input" id = "state">State</label>
+        <select name="address[state]" id="c-select" required class= "add-input">
             <option>select</option>     
             <option value="India">Tamil nadu</option>
             <option value="India">kerala</option>
             <option value="india">Andhra pradesh</option>
             <option value="india">Karnataka</option>
         </select><br>
-        <label for="lname" class= "add-input">Address type</label><br>
+        <%# <label for="lname" class= "add-input">Address type</label><br>
         <select name="address[address_type]" id="c-select" required class= "add-input">  <br>
             <option>select</option>     
             <option value="India">Home(7am - 9pm delivery)</option>
             <option value="India">Office/Commercial(10pm - 6pm delivery)</option>
             
-        </select><br>
+        </select><br> %>
         <input type = "submit" id = "add-sub">
        
     </form>

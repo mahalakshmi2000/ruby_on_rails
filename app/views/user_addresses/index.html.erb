@@ -1,0 +1,50 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>User Addresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pincode</th>
+      <th>Landmark</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_addresses.each do |user_address| %>
+      <tr>
+        <td><%= user_address.pincode %></td>
+        <td><%= user_address.landmark %></td>
+        <td><%= user_address.address %></td>
+        <td><%= user_address.city %></td>
+        <td><%= user_address.state %></td>
+        <td id = "show"><%= link_to 'Show', user_address%></td>
+        
+      </tr>
+      <button id = "edit"><%= link_to 'Edit', edit_user_address_path(user_address) %></button>
+      <button id = "delete"><%= link_to 'Destroy', user_address, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Address', new_user_address_path %> -->
+<div id = "new-address-div">
+  <h1 id = "address-head">User Addresses</h1>
+  <% @user_addresses.each do |user_address| %>
+    <span><%= user_address.pincode %></span>
+    <span><%= user_address.landmark %></span>
+    <span><%= user_address.address %></span>
+    <span><%= user_address.city %></span>
+    <span><%= user_address.state %></span><br>
+    <!-- <sp id = "show"><%= link_to 'Show', user_address%></sp> -->
+  <button id = "edit"><%= link_to 'Edit', edit_user_address_path(user_address) %></button>
+  <button id = "delete"><%= link_to 'Destroy', user_address, method: :delete, data: { confirm: 'Are you sure?' } %></button><br>
+<% end %>
+<%= link_to 'New User Address', new_user_address_path %>
+</div>

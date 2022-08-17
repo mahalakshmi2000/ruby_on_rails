@@ -20,8 +20,8 @@
       
         <a href="Gallery.html" id = "nav-a">wall Hanging</a>
         <div id = "address-div">
-               <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
-               <p id = "address-para">select your address</p></a>   
+               <%# <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i> %>
+               <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>      
         </div>
     </div>
        <%if session[:current_user_id] == nil %>
@@ -35,7 +35,7 @@
                     <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
                     <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
                     <a href="/login" style="color:white">Login</a>
-                    <a href="/signup" style="color:white">SignUp</a>
+                    <a href="/users/new" style="color:white">SignUp</a>
                     
                 </div>
                 
@@ -84,7 +84,7 @@
     </div>
 <div id = "product-list">
         <% items.each do |product| %>
-        <div id = "add-img-div">
+        <div  class = "add-img-div">
                 <%= image_tag product.image_url, id:"p-img" %>
                 <h4 id = "p-name"><%= product.product_name %></h4>
                 <p id = "p-desc"><%= product.description%></p>

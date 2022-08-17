@@ -16,6 +16,16 @@ class AddProductsController < ApplicationController
     end
   end
 
+  def add_items
+    current_user = session[:current_user_id]
+    if current_user.nil?
+      flash[:alert] = 'Please Signup'
+      redirect_to '/seller_page'
+    else
+      redirect_to 'add_products'
+    end
+  end
+
   private
 
   def product_params

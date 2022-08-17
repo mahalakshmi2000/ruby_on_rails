@@ -1,0 +1,46 @@
+
+<div id = "address-form-div">
+<%= form_with(model: user_address) do |form| %>
+  <% if user_address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_address.errors.count, "error") %> prohibited this user_address from being saved:</h2>
+
+      <ul>
+        <% user_address.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pincode,id:"a-lable1"%>
+    <%= form.text_field :pincode,class:"a-input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :landmark ,id:"a-lable2"%>
+    <%= form.text_field :landmark ,class:"a-input"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :address ,id:"a-lable3"%>
+    <%= form.text_field :address ,class:"a-input"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :city,id:"a-lable4" %>
+    <%= form.text_field :city ,class:"a-input"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :state,id:"a-lable4" %>
+    <%= form.text_field :state ,class:"a-input"%>
+  </div>
+
+  <div class="actions" id = "action">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
+<%# <h1>hello</h1> %>
