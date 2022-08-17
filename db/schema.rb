@@ -53,21 +53,6 @@ ActiveRecord::Schema.define(version: 20_220_816_141_506) do
     t.index %w[blob_id variation_digest], name: 'index_active_storage_variant_records_uniqueness', unique: true
   end
 
-  create_table 'addresses', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
-    t.string 'country'
-    t.bigint 'pincode'
-    t.string 'flat_no'
-    t.string 'street'
-    t.string 'landmark'
-    t.string 'city'
-    t.string 'state'
-    t.string 'address_type'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.bigint 'users_id', null: false
-    t.index ['users_id'], name: 'index_addresses_on_users_id'
-  end
-
   create_table 'adds', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
     t.string 'product_name'
     t.binary 'image_url'
@@ -125,6 +110,5 @@ ActiveRecord::Schema.define(version: 20_220_816_141_506) do
 
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'active_storage_variant_records', 'active_storage_blobs', column: 'blob_id'
-  add_foreign_key 'addresses', 'users', column: 'users_id'
   add_foreign_key 'carts', 'adds'
 end

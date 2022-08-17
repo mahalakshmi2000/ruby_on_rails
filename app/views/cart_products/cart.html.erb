@@ -14,7 +14,7 @@
         <%# <button id = "number">1</button> %>
         <button class = "plus" onclick="plus(<%= i%>,<%= cart_product.price  %>)" id ="minus_<%= cart_product.id%>">+</button>
         <p id = "cart-price<%= i%>" class="price-para"><%= cart_product.price  %></p>
-        <button id = "delete-butt"><i class="fa fa-trash-o" style="font-size:30px; color:#8d8585"></i></button>
+        <a href="carts/:id"><button id = "delete-butt"><i class="fa fa-trash-o" style="font-size:30px; color:#8d8585"></i></button></a>
         <button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
     </div>
     <%end%>

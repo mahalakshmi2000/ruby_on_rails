@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'blog_post/index'
   get 'products_page', to: 'list_products#shop'
   # get  '/nav',to: 'decoroms#render_list'
-  get '/home', to: 'decoroms#index'
+  root 'decoroms#index'
   get 'seller_page', to: 'decoroms#seller_page'
   get '/login', to: 'sessions#login'
   # get '/signup', to: 'users#signup'

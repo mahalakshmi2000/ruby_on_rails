@@ -8,6 +8,9 @@ class CartProductsController < ApplicationController
   end
 
   def destroy
+    puts '==========='
+    puts params[:id]
+    puts '==========='
     @product = Cart.find(params[:id])
     @product.destroy
     redirect_to products_path

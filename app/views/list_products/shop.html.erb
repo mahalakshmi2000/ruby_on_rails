@@ -97,7 +97,9 @@
 
     <div id = "product-list">
   
-      
+  <% if flash[:error]%>
+            <p class="flash-msg"><%= flash[:error] %></p>  
+        <% end %>    
     <% @page_post.each.with_index do |blog,j| %>
     <div id = "add-img-div_<%= blog.id%> " onclick="view(<%= j%>)" class = "add-img-div">
         <%= image_tag blog.image_url, id:"p-img" %>
@@ -110,9 +112,7 @@
     </div>
     <% end %>
     </div> 
-       <% if flash[:error]%>
-            <p class="flash-msg" style="color:red;"><%= flash[:error] %></p>  
-    <% end %>
+        
     <div id = "pagination"><%= pagy_nav(@pagy).html_safe %> </div>
     <div id = "shop-f">
         <div id = "shop-address">
