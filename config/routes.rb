@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'trending_products_form', to: 'trending_products#index'
   get '/cart_page', to: 'cart_products#cart'
   get '/cart_page/:product_id', to: 'list_products#cart_items'
-  get 'carts/:id', to: 'cart_products#destroy'
+  get 'carts/:cart_id', to: 'cart_products#destroy'
 
   get '/payments', to: 'payments#user_payment'
   get '/address', to: 'user_details#new'
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'products_page', to: 'list_products#shop'
   # get  '/nav',to: 'decoroms#render_list'
   root 'decoroms#index'
+  get 'home', to: 'decoroms#index'
   get 'seller_page', to: 'decoroms#seller_page'
   get '/login', to: 'sessions#login'
   # get '/signup', to: 'users#signup'

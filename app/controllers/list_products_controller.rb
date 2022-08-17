@@ -21,19 +21,20 @@ class ListProductsController < ApplicationController
     else
       product_id = params[:product_id]
       puts "product_id is #{product_id}"
-      temp = Cart.select('add_id')
-      puts temp
+      temp = Cart.find_by_add_id(product_id)
+      p ']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]'
+      p temp
 
-      if temp == product_id
+      if temp
         # render plain:"faild"
-
+        # p temp
         flash[:error] = 'already added cart page'
         redirect_to '/products_page'
 
       else
         @cart_items = Cart.create(add_id: product_id)
         redirect_to '/cart_page'
-        #  render plain: "success"
+        # render plain: "success"
       end
 
     end
