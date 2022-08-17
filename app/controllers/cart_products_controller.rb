@@ -1,18 +1,28 @@
+# frozen_string_literal: true
+
 class CartProductsController < ApplicationController
   def cart
+    @cart_products = Add.joins(:cart).all.map do |cart_products|
+      cart_products
+    end
   end
 
-  def create
-    current_user = session[:current_user_id] ;
-      if current_user == nil
-        flash[:alert] = "Please Signup"
-        redirect_to 'list_products/shop'
-
-      else
-        product_id = params[:product_id] 
-        puts "product_id is #{product_id}"
-        
+  def destroy
+    puts '==========='
+    puts params[:id]
+    puts '==========='
+    @product = Cart.find(params[:id])
+    @product.destroy
+    redirect_to products_path
   end
-end
 
+  def order_item
+    current_user = session[:current_user_id]
+    if current_user.nil?
+      flash[:alert] = 'Please Signup'
+      redirect_to 'products_page'
+    else
+      redirect_to 'payments'
+    end
+  end
 end

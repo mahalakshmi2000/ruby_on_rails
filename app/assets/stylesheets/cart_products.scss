@@ -1,3 +1,63 @@
 // Place all the styles related to the cart_products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#child-cart{
+    width:70%;
+    // border: 1px solid black;
+    height: 250px;
+    margin: auto;
+    box-shadow: 0 0 8px;
+    margin-top: 5%;
+}
+#parent-cart{
+    // border: 1px solid black;
+    width: 100%;
+    margin-top: 3%;
+}
+#cart-img{
+    width:24%;
+    height: 212px;
+    // border: 1px solid black;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 2%;
+
+}
+#cart-pname{
+    // border: 1px solid black;
+    display: inline-block;
+    margin-left: 6%;
+    font-size: 22px;
+}
+.minus{
+    margin-left: 6%;
+}
+#cart-price{
+    display: inline-block;
+    margin-left: 6%;
+}
+#delete-butt{
+    background: none;
+    border: none;
+    margin-left: 6%;
+    
+
+}
+#buy-button{
+    margin-left: 81%;
+    // margin-top: -20%;
+    position: relative;
+    bottom:10%;
+    background-color: #6ECB63;
+    border:none;
+    height: 30px;
+    border-radius: 5px;
+}
+.para2{
+    width: 25px;
+    padding-left: 5px;
+}
+.price-para{
+    display: inline-block;
+    margin-left: 8%;
+}

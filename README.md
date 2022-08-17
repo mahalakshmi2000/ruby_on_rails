@@ -39,6 +39,7 @@ Things you may want to cover:
 * Add customers address : Completed
 * Pagenation : Completed
 * Categories : Completed
+* Trending Produts: Completed
 * Payment method : In Progress
 * Add to cart : In Progress
 * Review : not started yet

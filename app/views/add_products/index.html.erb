@@ -4,8 +4,9 @@
 </div>
 <div id = "add-form">
         <h1 id= "add-head">Add Products</h1>
-            
+                
                 <%= form_with url:'add_products_path', method:"POST" do |form| %> 
+                <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
                     <%= form.text_field "add[product_name]" ,placeholder: "name", class:"p-input" %>
                     <%= form.text_field "add[description]" ,placeholder: "description", class:"p-input" %>
                     <%= form.text_field "add[image_url]", placeholder: "url", class:"p-input" %>

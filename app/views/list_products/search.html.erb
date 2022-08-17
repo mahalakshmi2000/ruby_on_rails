@@ -1,0 +1,107 @@
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id = "home-body">
+    <div id = "nav">
+        <div id = "logo-div">
+            <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
+        </div>
+        <div id = "search-div">
+            <form role="search" action="/search">
+                <input type="text" placeholder="Search.." id = "search" name="q" aria-label="Search">
+                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="topnav">
+        
+        <a class="active" href="/home" style = "margin-left:12%" id = "nav-a">Home</a>
+        <a href="About.html" id = "nav-a">Antique</a>
+        <a href="Shop.html" id = "nav-a">Gifts</a>
+        <%# <a href="Gallery.html">Lamp&Lightning</a> %>
+      
+        <a href="Gallery.html" id = "nav-a">wall Hanging</a>
+        <div id = "address-div">
+               <%# <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i> %>
+               <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>   
+        </div>
+    </div>
+       <%if session[:current_user_id] == nil %>
+            <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                <div class = "dropdown-content2">
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="/login" style="color:white">Login</a>
+                    <a href="/users/new" style="color:white">SignUp</a>
+                    
+                </div>
+                
+                
+            </div>
+        <%else%>
+                <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                  <% logged_user = User.find(session[:current_user_id]) %>
+                    <label class="user-name" style="color:white" ><%= logged_user["user_name"] %></label>
+                <div class = "dropdown-content2">
+                    
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="#" style="color:white">Profile</a>
+                    <a href='/logout' style="color:white">Logout</a>
+                  
+                </div>
+                
+                
+            </div>
+        <%end%>
+
+    </div>
+    
+    <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/clocks">Wall Clocks</a>
+                <a href="/paintings">Wall Paintings</a>
+                <a href="#">Toys</a>
+                <a href="#">Carpets</a>
+                <a href="/lights">Lights</a>
+                <a href = "/statues">Statues</a>
+                <a href="#">Wall Stickers</a>
+                <a href="/candleholders">Candle Holders</a>
+                <a href="/shelfhangings">Shelf Hangings</a>
+            </div>
+            
+    </div>
+<div id = "product-list">
+        <% @products1.each do |product| %>
+        <div  class = "add-img-div">
+                <%= image_tag product.image_url, id:"p-img" %>
+                <h4 id = "p-name"><%= product.product_name %></h4>
+                <p id = "p-desc"><%= product.description%></p>
+                <p id = "p-rate">Rs:<%= product.price%></p>
+                <span class="striked-price"><s><%= product.actualprice%></s></span><br>
+                <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
+                <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= product['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+        </div>
+        <% end %>
+</div> 
+</body>
+<script>
+    function myFunction() {
+        alert(" Item added to the cart ");
+    }
+    function buyFuntion(){
+        alert("select your address")
+    }
+</script>

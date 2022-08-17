@@ -32,9 +32,9 @@
         <p id = "items-para">Total Items</p><button id = "items-butt" >3</button>
         <hr>
         <p id = "price-para" >Total Price</p><p id = "price-para2" >Rs:300</p><br>
-        <button type="submit" id = "pay-butt">Pay now</button>
+        <button type="submit" id = "pay-butt" onclick="orderFunction()">Order now</button>
     </div>
-        <div id = "div2">
+        <!-- <div id = "div2">
             <%= image_tag 'decorative-light.jpg', alt: 'logo' ,id:"ex-img"%><br>
             <p class = "p-span span1">Item name:</p><p class = "p-span " style="margin-left:5%">light</p><br>
             <p class = "p-span span1">Order No:</p> <p class = "p-span " style="margin-left:6%">#2345</p><br>
@@ -46,5 +46,12 @@
            
             
 
-        </div>
+        </div> -->
   </div>
+  <script>
+    function orderFunction() {
+        alert("successfully order your item")
+    }
+    let getValue = JSON.parse(localStorage.getItem("items"));
+    console.log(getValue);
+  </script>

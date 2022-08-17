@@ -14,7 +14,7 @@ body{
     // position: absolute;
     position: fixed;
     top: 50px;
-    z-index: 2;
+    z-index: 100;
     width: 15%;
     // border: 1px solid black;
 
@@ -34,9 +34,12 @@ body{
   }
   #t-prodect{
     // border:1px solid black;
+    position: relative;
+    top: 280px;
     width: 50%;
     float: right;
-    margin-top: 18%;
+    z-index: -1;
+    // margin-top: 18%;
 
   }
   #add-anger{
@@ -121,14 +124,15 @@ body{
     height: 53px;
     position:fixed;
     top:0;
-    z-index: 100;
+    // z-index: 100;
+    z-index: 1;
 }
 .topnav {
     overflow: hidden;
      background-color:#476072; 
      position: fixed;
      z-index: 100;
-    top:9%;
+     top:8%;
      width:100%;
 }
 #home-body{
@@ -143,10 +147,12 @@ body{
     // border: 1px solid black;
     height: 51px;
     float: right;
+    z-index: 200;
     margin-right: 8%;
-    margin-top: 2px;
+    // margin-top: -42px;
+    // background-color: red;
     // float: left;
-    overflow: hidden;
+    // overflow: hidden;
 
 
 }
@@ -156,6 +162,7 @@ body{
     border: none;
     outline: none;
     color: white;
+    z-index: 200;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -167,10 +174,10 @@ body{
     background-color: white;
     min-width: 145px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    // z-index: ;
+    z-index: 200;
     padding-left: 77px;
     margin-left: -6%;
-    margin-top: -2px;
+    margin-top: -10px;
     padding-bottom: 3%;
 
   }
@@ -208,8 +215,6 @@ body{
 #cart-div{
     height: 37px;
     float: left;
-    // margin-right: 12%;
-    // margin-top: 8px;
     width:5%;
     position: absolute;
     right: 5px;
@@ -238,11 +243,13 @@ body{
 #img{
     width:40%;
     height:400px;
+    position: relative;
+    top: 150px;
+    z-index: -1;
     // border: 1px solid black;
-    margin-top: 5%;
-    margin-left: 5%;
+    left: 5%;
     float: left;
-    margin-top:13%;
+    margin: 0;
 }
 #intro-img{
     width:100%;
@@ -276,12 +283,13 @@ body{
     font-size: 45px;
     margin-top: 55px;
     text-align: center;
+    // z-index: 0;
 }
 #subscribe{
     width:100%;
     height: 500px;
     background-color: #EEEEEE;
-    margin-top: 550px;
+    margin-top: 280px;
     padding-top: 5px;
 }
 #sub-p{
@@ -299,10 +307,10 @@ body{
 #sub-head{
     // position: absolute;
     //  top: 60px;
-    width: 48%;
+    width: 50%;
     font-size: 42px;
     margin-left: 26%;
-    margin-top: 5%;
+    margin-top: 8%;
     z-index: -1;
     // border: 1px solid black;
 }
@@ -328,14 +336,14 @@ body{
 .a-div{
     width: 28%;
     height: 310px;
-    border: 1px solid black;
+    // border: 1px solid black;
     box-shadow: 0 0 5px;
     margin-left: 15px;
     // margin-top:15%;
-    display: inline-block;
+    // display: inline-block;
     background-color: #06283D;
     border-radius: 10px;
-    // position: relative;
+    position: relative;
     z-index: -1;
 }
 .logo{
@@ -350,21 +358,32 @@ body{
     margin-bottom: 5px;
 }
 #des{
+    position: absolute;
+    left: 35%;
+    top: -100px;
     font-size: 45px;
-    display: inline-block;
-    margin-left: -9%;
+    z-index: -1;
+    // display: inline-block;
 }
 #container{
     width: 100%;
-    height: 300px;
+    position: relative;
+    top: 250px;
+     height: 1050px;
+    z-index: -1;
+    // border: 1px solid black;
 }
 #advantage{
-    margin-top: 42%;
-   
+    width: 100%;
+    position: relative;
+    // background-color: #6ECB63;
+    top: 250px;
+    display: flex;
+
 }
 #f-div{
-     margin-left: 9%;
-
+    //  margin-left: 9%;
+    margin-left: 7%;
 }
 #p-div{
     margin-left: 11%;
@@ -518,6 +537,8 @@ footer{
     padding-top: 3px;
     width: 19px;
     height: 19px;
+    margin-left: 15px;
+    margin-top: 5px;
     
 }
 .cart-button{
