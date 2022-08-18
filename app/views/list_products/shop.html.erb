@@ -21,7 +21,7 @@
         
         <div class="topnav">
         
-            <a class="active" href="index.html.erb" style = "margin-left:12%" id = "nav-a">Home</a>
+            <a class="active" href="/home" style = "margin-left:12%" id = "nav-a">Home</a>
             <a href="/antiques" id = "nav-a">Antique</a>
             <a href="#" id = "nav-a">Gifts</a>  
             <a href="#" id = "nav-a">Wall Hanging</a>
@@ -97,9 +97,9 @@
 
     <div id = "product-list">
   
-  <% if flash[:error]%>
+    <% if flash[:error]%>
             <p class="flash-msg"><%= flash[:error] %></p>  
-        <% end %>    
+    <% end %>    
     <% @page_post.each.with_index do |blog,j| %>
     <div id = "add-img-div_<%= blog.id%> " onclick="view(<%= j%>)" class = "add-img-div">
         <%= image_tag blog.image_url, id:"p-img" %>
@@ -107,8 +107,18 @@
         <p id = "p-desc"><%= blog.description%></p>
         <p id = "p-rate">Rs:<%= blog.price%></p>
         <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
-        <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
-        <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+        <%if session[:current_user_id] == nil %>
+            <a href="#"><button onclick = "alterFuntion()" id ="buy" >Buy now</button></a>
+        <%else%>
+            <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
+        <% end %>
+
+
+        <%if session[:current_user_id] == nil %>
+            <button id = "cart-butt"  onclick = "alterFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button> 
+        <%else%>
+             <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+        <% end %>
     </div>
     <% end %>
     </div> 
@@ -149,7 +159,10 @@
         alert(" Item added to the cart ");
     }
     function buyFuntion(){
-        alert("select your address")
+        alert("select your address");
+    }
+    function alterFuntion(){
+        alert("please login first");
     }
 </script>
 

@@ -29,9 +29,12 @@
             <option value="India">Pay cash on delivery</option>
         </select><br>
         <br>
-        <p id = "items-para">Total Items</p><button id = "items-butt" >3</button>
-        <hr>
-        <p id = "price-para" >Total Price</p><p id = "price-para2" >Rs:300</p><br>
+        <p id = "items-para">Total Items</p>
+            <hr>
+        <p id = "price-para" >Total Price</p><br>
+        <div id = "addmenu">
+            
+        </div>
         <button type="submit" id = "pay-butt" onclick="orderFunction()">Order now</button>
     </div>
         <!-- <div id = "div2">
@@ -52,6 +55,20 @@
     function orderFunction() {
         alert("successfully order your item")
     }
+    function renderFood(addItems){
+         let len = addItems.length;
+         console.log(len);
+         let adding ="";
+            for (let i = 0; i < len; i++) {
+                let obj = addItems[i];
+                let food = `<button id = "items-butt" >${obj.qty}</button><br>
+                            <p id = "price-para2" >${obj.total}</p>`;
+                adding = adding + food;
+            }
+            document.getElementById("addmenu").innerHTML = adding;
+}
+
     let getValue = JSON.parse(localStorage.getItem("items"));
     console.log(getValue);
+    renderFood(getValue);
   </script>
