@@ -15,7 +15,11 @@
         <button class = "plus" onclick="plus(<%= i%>,<%= cart_product.price  %>)" id ="minus_<%= cart_product.id%>">+</button>
         <p id = "cart-price<%= i%>" class="price-para"><%= cart_product.price  %></p>
         <a href="carts/:id"><button id = "delete-butt"><i class="fa fa-trash-o" style="font-size:30px; color:#8d8585"></i></button></a>
-        <button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
+        <%if session[:current_user_id] == nil %>
+           <button id = "buy-button" onclick="alterFuntion()">PROCCED TO PAY</button></a>
+        <%else%>
+            <a href="user_addresses/new"><button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
+        <% end %>
     </div>
     <%end%>
    
@@ -69,7 +73,9 @@
     let addValue = JSON.stringify(paymentArray);
     localStorage.setItem("items", addValue);
     }
-    
+     function alterFuntion(){
+        alert("please login first");
+    }
     
 </script>
 

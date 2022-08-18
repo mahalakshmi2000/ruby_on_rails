@@ -18,12 +18,11 @@ Rails.application.routes.draw do
   get '/antiques', to: 'categories#antique'
   get '/candleholders', to: 'categories#candleholder'
   get '/shelfhangings', to: 'categories#shelfhanging'
-
   get 'blog_post/index'
   get 'products_page', to: 'list_products#shop'
   # get  '/nav',to: 'decoroms#render_list'
   root 'decoroms#index'
-  get 'home', to: 'decoroms#index'
+  get '/home', to: 'decoroms#index'
   get 'seller_page', to: 'decoroms#seller_page'
   get '/login', to: 'sessions#login'
   # get '/signup', to: 'users#signup'

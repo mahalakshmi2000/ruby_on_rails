@@ -37,11 +37,13 @@
     font-size:16px;
     margin-left:9%;
      display:inline-block;
+    
 }
 #price-para2{
     font-size:16px;
     margin-left:370px;
     display:inline-block;
+    margin-top: 10%;
 }
 #pay-butt{
     margin-left:27%;
@@ -73,6 +75,14 @@
     // float: left;
     width: 49%;
     margin: auto;
+}
+#addmenu{
+    position: absolute;
+    // border: 1px solid black;
+    /* margin-bottom: 5%; */
+    bottom: 46%;
+    left: 37%;
+    height: 13%;
 }
 #ex-img{
      height:250px;
