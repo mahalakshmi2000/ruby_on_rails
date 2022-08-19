@@ -40,12 +40,11 @@ Things you may want to cover:
 * Pagenation : Completed
 * Categories : Completed
 * Trending Produts: Completed
-* Payment method : In Progress
-* Add to cart : In Progress
+* Payment method : Completed
+* Add to cart : Completed
+* Logout : Completed
+* search : Completed
+* User profile : Completed
 * Review : not started yet
 * Return orders : not started yet
-* Logout : not started yet
 * Forget password : not started yet
-* search : not started yet
-
-# dev
