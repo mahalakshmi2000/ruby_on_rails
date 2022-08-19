@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   # get  '/nav',to: 'decoroms#render_list'
   root 'decoroms#index'
   get '/home', to: 'decoroms#index'
+  get '/profile', to: 'decoroms#user_profile'
   get 'seller_page', to: 'decoroms#seller_page'
   get '/login', to: 'sessions#login'
   # get '/signup', to: 'users#signup'

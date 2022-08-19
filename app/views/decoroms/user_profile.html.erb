@@ -1,0 +1,109 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id = "home-body">
+    <div id = "nav">
+        <div id = "logo-div">
+            <%= image_tag 'TEXT-WHITE.png', alt: 'logo', id:'home-dec' %>
+        </div>
+        <div id = "search-div">
+            <form  role="search" action="/search">
+                <input type="text" placeholder="Search.."  id = "search" name="q" aria-label="Search">
+                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <div class="topnav">
+        
+            <a class="active" href="/home" style = "margin-left:12%" id = "nav-a">Home</a>
+            <a href="/antiques" id = "nav-a">Antique</a>
+            <a href="#" id = "nav-a">Gifts</a>  
+            <a href="#" id = "nav-a">Wall Hanging</a>
+            <%# <a href="#" id = "nav-a">Ceramic</a>  %>
+             <div id = "address-div">
+                   <%# <a href = "user_details/new" id = "add-anger"> 
+                   <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+                   <p id = "address-para">Become a seller</p>
+                   </a>    %>
+                   <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>
+            </div>
+            
+        </div>
+      <%if session[:current_user_id] == nil %>
+            <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                <div class = "dropdown-content2">
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="/login" style="color:white">Login</a>
+                    <a href="/users/new" style="color:white">SignUp</a>
+                    
+                </div>
+                
+                
+            </div>
+        <%else%>
+                <div id = "cart-div">
+                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                
+            </div>
+            <div class="dropdown2">
+                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                  <% logged_user = User.find(session[:current_user_id]) %>
+                    <label class="user-name" style="color:white" ><%= logged_user["user_name"] %></label>
+                <div class = "dropdown-content2">
+                    
+                    <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
+                    <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
+                    <a href="#" style="color:white">Profile</a>
+                    <a href='/logout' style="color:white">Logout</a>
+                  
+                </div>
+                
+                
+            </div>
+        <%end%>
+
+    </div>
+
+    <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-navicon" style="font-size:24px;margin-left:5%; position:absolute"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/clocks">Wall Clocks</a>
+                <a href="/paintings">Wall Paintings</a>
+                <a href="#">Toys</a>
+                <a href="#">Carpets</a>
+                <a href="/lights">Lights</a>
+                <a href = "/statues">Statues</a>
+                <a href="#">Wall Stickers</a>
+                <a href="/candleholders">Candle Holders</a>
+                <a href="/shelfhangings">Shelf Hangings</a>
+
+
+            </div>
+    </div>
+
+<div class="manager-home-page-div1">
+    <div class="about_manager_div1">
+        <div class="profile-img-div1">
+            <%= image_tag('user-profile.png',class: "profile-img1" ,id: "chosen-image") %>
+        </div>
+
+        <div class="profile-content-div1">
+        <div class="manager-profile1 name-div1">Name</div>
+        
+        <span class="manager-profile-span1 name-span"><%=@user_profile.user_name%></span>
+        <div class="manager-profile1 mail-div">Email</div>
+       
+        <span class="manager-profile-span1 mail-span"><%=@user_profile.email%></span>
+        <div class="manager-profile1 contact-div">Contact</div>
+        <span class="manager-profile-span1 contact-span"><%=@user_profile.phone_number%></span>
+    </div>
+    </div>
+</div>
+</body>

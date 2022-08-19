@@ -9,21 +9,17 @@ body{
     // margin-left: 2%;
 }
 .dropdown {
-    //float: left;
-    // margin-left: 20%;
-    // position: absolute;
+    
     position: fixed;
     top: 50px;
     z-index: 100;
     width: 15%;
-    // border: 1px solid black;
+    
 
   }
   #address-div{
-    // border: 1px solid black; */
     display: inline-block;
     margin-left: 45%;
-    /* margin-top: 5%; */
     position: absolute;
     top: 24%;
     color: white;
@@ -33,13 +29,11 @@ body{
     font-size: 16px;
   }
   #t-prodect{
-    // border:1px solid black;
     position: relative;
     top: 280px;
     width: 50%;
     float: right;
     z-index: -1;
-    // margin-top: 18%;
 
   }
   #add-anger{
@@ -143,16 +137,12 @@ body{
 
 }
 .dropdown2{
-    // width: 15%;
-    // border: 1px solid black;
+    
     height: 51px;
     float: right;
     z-index: 200;
     margin-right: 8%;
-    // margin-top: -42px;
-    // background-color: red;
-    // float: left;
-    // overflow: hidden;
+    
 
 
 }
@@ -295,24 +285,19 @@ body{
 #sub-p{
     border: #06283D;
     width: 39%;
-    // margin-top: 7%;
     margin-left: 31%;
 }
 #sub-p2{
     border: #06283D;
     width: 39%;
-    // margin-top: 7%;
     margin-left: 40%;
 }
 #sub-head{
-    // position: absolute;
-    //  top: 60px;
     width: 50%;
     font-size: 42px;
     margin-left: 26%;
     margin-top: 8%;
     z-index: -1;
-    // border: 1px solid black;
 }
 #sub-butt{
     width: 10%;
@@ -336,11 +321,8 @@ body{
 .a-div{
     width: 28%;
     height: 310px;
-    // border: 1px solid black;
     box-shadow: 0 0 5px;
     margin-left: 15px;
-    // margin-top:15%;
-    // display: inline-block;
     background-color: #06283D;
     border-radius: 10px;
     position: relative;
@@ -363,7 +345,6 @@ body{
     top: -100px;
     font-size: 45px;
     z-index: -1;
-    // display: inline-block;
 }
 #container{
     width: 100%;
@@ -376,13 +357,11 @@ body{
 #advantage{
     width: 100%;
     position: relative;
-    // background-color: #6ECB63;
     top: 250px;
     display: flex;
 
 }
 #f-div{
-    //  margin-left: 9%;
     margin-left: 7%;
 }
 #p-div{
@@ -409,9 +388,7 @@ body{
 #review{
     width:100%;
     height: 500px;
-    //  background-color: #EEEEEE;
-    // margin-top: 550px;
-    //border: 1px solid black;
+    
 }
 #c-review{
     font-size: 45px;
@@ -565,4 +542,60 @@ footer{
     position: absolute;
 
 
+}
+
+.manager-home-page-div1 {
+    position: relative;
+    display: flex;
+    top: 150px;
+}
+.about_manager_div1{
+    background-color: #ffff;
+    position: relative;
+    box-shadow: 3px 3px 6px #E8E8E8,
+    -3px -3px 6px rgb(246, 246, 246);
+    width: 1130px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    left: 5%;
+    border-radius: 25px;
+}
+.profile-img-div1 {
+    position: relative;
+    width: 40%;
+    // background: #1DD3FD;
+}
+.profile-img-div1 img {
+    position: absolute;
+    left: 8%;
+    width: 360px;
+    height: 340px;
+}
+.profile-img1 {
+    position: relative;
+    width: 390px;
+    height: 300px;
+    border-radius: 17px;
+    top: 5%;
+    left: 14%;
+}
+.profile-content-div1 {
+    position: relative;
+    left: 8%;
+    top:7%;
+}
+.manager-profile1 {
+    font-size: 1rem;
+    color: #AFB8BD;
+    font-weight: 600;
+    margin-top: 20%;
+    letter-spacing: 1px;
+}
+.manager-profile-span1 {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 600;
+    margin-left: 1%;
+    letter-spacing: 1px;
 }

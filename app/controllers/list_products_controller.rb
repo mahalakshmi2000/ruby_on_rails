@@ -41,6 +41,6 @@ class ListProductsController < ApplicationController
   end
 
   def search
-    @products1 = Add.where('description Like ?', "%#{params[:q]}%")
+    @products1 = Add.where('description LIKE ? OR product_name LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%")
   end
 end
