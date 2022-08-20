@@ -23,4 +23,8 @@ class DecoromsController < ApplicationController
     end
     @trending
   end
+
+  def user_profile
+    @user_profile = User.find(session[:current_user_id])
+  end
 end

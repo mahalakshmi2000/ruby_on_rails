@@ -26,8 +26,6 @@ class ListProductsController < ApplicationController
       p temp
 
       if temp
-        # render plain:"faild"
-        # p temp
         flash[:error] = 'already added cart page'
         redirect_to '/products_page'
 
@@ -41,6 +39,6 @@ class ListProductsController < ApplicationController
   end
 
   def search
-    @products1 = Add.where('description Like ?', "%#{params[:q]}%")
+    @products1 = Add.where('description LIKE ? OR product_name LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%")
   end
 end

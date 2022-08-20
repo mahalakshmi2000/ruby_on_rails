@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    
-  </style>
-</head>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body id = "home-body">
     <div id = "nav">
         <div id = "logo-div">
@@ -24,9 +17,13 @@
             <a class="active" href="/home" style = "margin-left:12%" id = "nav-a">Home</a>
             <a href="/antiques" id = "nav-a">Antique</a>
             <a href="#" id = "nav-a">Gifts</a>  
-            <a href="/shelfhangings" id = "nav-a">Wall Hanging</a>
+            <a href="#" id = "nav-a">Wall Hanging</a>
             <%# <a href="#" id = "nav-a">Ceramic</a>  %>
              <div id = "address-div">
+                   <%# <a href = "user_details/new" id = "add-anger"> 
+                   <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
+                   <p id = "address-para">Become a seller</p>
+                   </a>    %>
                    <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>
             </div>
             
@@ -91,77 +88,30 @@
             </div>
     </div>
 
-    <div id = "product-list">
-  
-    <% if flash[:error]%>
-            <p class="flash-msg"><%= flash[:error] %></p>  
-    <% end %>    
-    <% @page_post.each.with_index do |blog,j| %>
-    <div id = "add-img-div_<%= blog.id%> " onclick="view(<%= j%>)" class = "add-img-div">
-        <%= image_tag blog.image_url, id:"p-img" %>
-        <h4 id = "p-name"  ><%= blog.product_name %></h4>
-        <p id = "p-desc"><%= blog.description%></p>
-        <p id = "p-rate">Rs:<%= blog.price%></p>
-        <span class="striked-price"><s><%= blog.actualprice%></s></span><br>
-        <%if session[:current_user_id] == nil %>
-            <a href="#"><button onclick = "alterFuntion()" id ="buy" >Buy now</button></a>
-        <%else%>
-            <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
-        <% end %>
+<div class="manager-home-page-div1">
+    <div class="about_manager_div1">
+        <div class="profile-img-div1">
+            <%= image_tag('user-profile.png',class: "profile-img1" ,id: "chosen-image") %>
+        </div>
 
-
-        <%if session[:current_user_id] == nil %>
-            <button id = "cart-butt" onclick = "alterFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
-        <%else%>
-             <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
-        <% end %>
-    </div>
-    <% end %>
-    </div> 
+        <div class="profile-content-div1">
+        <div class="manager-profile1 name-div1">Name</div>
         
-    <div id = "pagination"><%= pagy_nav(@pagy).html_safe %> </div>
-    <div id = "shop-f">
-        <div id = "shop-address">
-             <%= image_tag 'text.png', alt: 'logo', id:'f-img' %>
-             <p>ADDRESS: 28 White tower, Street Name New York City, USA</p>
-             <p>TELEPHONE: +91 987 654 3210</p>
-             <p>EMAIL: yourmain@gmail.com</p>
-        </div>
-         <div id = "shop-menu">
-            <h3 class = "f-head" >Menu</h3>
-             <p class = "footer-p">Home</p>
-             <p class = "footer-p">About</p>
-             <p class = "footer-p">Contact</p>
-             <p class = "footer-p">Blog</p>
-        </div>
-         <div id = "shop-account">
-            <h3 class = "f-head">Account</h3>
-             <p class = "footer-p">Account</p>
-             <p class = "footer-p">Checkout</p>
-             <p class = "footer-p">Login</p>
-             <p class = "footer-p">Register</p>
-        </div>
+        <span class="manager-profile-span1 name-span"><%=@user_profile.user_name%></span>
+        <div class="manager-profile1 mail-div">Email</div>
+       
+        <span class="manager-profile-span1 mail-span"><%=@user_profile.email%></span>
+        <div class="manager-profile1 contact-div">Contact</div>
+        <span class="manager-profile-span1 contact-span"><%=@user_profile.phone_number%></span>
+        <%# <%User.where(id: current_user['id']).map do |item|%> %>
+
+        <%# <% User_address.joins(:user).where(id: item['user_id']).each do |user_item| %> %>
+        <%# <div id = "user-item"> %>
+            <%# <%= user_item.pincode%> %>
+        <%# </div> %>
+        <%# <%end%> %>
+        <%# <%end %> %>
     </div>
-    
-    <footer>
-        <p id = "foot-para1">Email Id : mahalakshmiragaviragavi@gmail.com</p>
-        <p id = "foot-para2">© 2022  All Rights Reserved By  Mahalakshmi Palani</p>
-    </footer>
-    
-  </body>
-</html>
-<script>
-    function myFunction() {
-        alert(" Item added to the cart ");
-    }
-    function buyFuntion(){
-        alert("select your address");
-    }
-    function alterFunction(){
-        alert("please login first");
-    }
-</script>
-
-
-
-
+    </div>
+</div>
+</body>
