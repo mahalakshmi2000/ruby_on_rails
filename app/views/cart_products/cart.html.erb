@@ -2,11 +2,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 <h1><a href="/products_page"><i style='font-size:28px' class='fas'>&#xf30a;</i></a>      Continue Shopping</h1>
+
 <div id = "parent-cart">
-    <% @cart_products.each_with_index do |cart_product,i|%>
+    <% @cart_products.each_with_index do |cart_product,i| %>
     <div id = "child-cart">
         <%= image_tag cart_product.image_url, id:"cart-img" %>
-       <p id = "cart-pname"> <%= cart_product.product_name %></p>
+        <p id = "cart-pname"> <%= cart_product.product_name %></p>
        
         <button class = "minus" id ="minus_<%= cart_product.id%>" onclick="minus(<%= i%>,<%= cart_product.price  %>)" value="1">-</button>
         <input id = "number<%= i%>"  value="1"class="para2">
@@ -21,10 +22,14 @@
             <a href="user_addresses/new"><button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
         <% end %>
     </div>
-    <%end%>
+    <%end %>
    
 </div>
+
+
 </body>
+
+
 <script>
     function plus(inputId,productValue) {
        

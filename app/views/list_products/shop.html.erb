@@ -24,13 +24,9 @@
             <a class="active" href="/home" style = "margin-left:12%" id = "nav-a">Home</a>
             <a href="/antiques" id = "nav-a">Antique</a>
             <a href="#" id = "nav-a">Gifts</a>  
-            <a href="#" id = "nav-a">Wall Hanging</a>
+            <a href="/shelfhangings" id = "nav-a">Wall Hanging</a>
             <%# <a href="#" id = "nav-a">Ceramic</a>  %>
              <div id = "address-div">
-                   <%# <a href = "user_details/new" id = "add-anger"> 
-                   <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
-                   <p id = "address-para">Become a seller</p>
-                   </a>    %>
                    <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a>
             </div>
             
@@ -115,7 +111,7 @@
 
 
         <%if session[:current_user_id] == nil %>
-            <button id = "cart-butt"  onclick = "alterFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button> 
+            <button id = "cart-butt" onclick = "alterFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
         <%else%>
              <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
         <% end %>
@@ -161,7 +157,7 @@
     function buyFuntion(){
         alert("select your address");
     }
-    function alterFuntion(){
+    function alterFunction(){
         alert("please login first");
     }
 </script>

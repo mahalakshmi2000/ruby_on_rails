@@ -26,8 +26,6 @@ class ListProductsController < ApplicationController
       p temp
 
       if temp
-        # render plain:"faild"
-        # p temp
         flash[:error] = 'already added cart page'
         redirect_to '/products_page'
 

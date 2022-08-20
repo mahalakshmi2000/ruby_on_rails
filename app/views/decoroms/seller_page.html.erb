@@ -10,7 +10,7 @@
             /* border: 1px solid black; */
             height:60px;
             position: relative;
-            padding-top: 15px;
+            padding-top: 20px;
             background-color:#476072; 
         }
         .seller-a{
@@ -51,11 +51,22 @@
             font-size: 20px;
         }
         #sign-a{
-            margin-left: 570px;
+            margin-left: 28px;
             color:black;
             background-color:white;
             padding: 10px;
             border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        #login-a{
+            margin-left: 430px;
+            color:black;
+            background-color:white;
+            padding: 10px;
+            border-radius: 5px;
+            padding-left: 25px;
+            padding-right: 25px;
         }
         #sell-butt{
             position:absolute; 
@@ -79,6 +90,7 @@
         <a href="#" class = "seller-a">Services</a>
         <a href="#" class = "seller-a">Resources</a>
         <a href="#" class = "seller-a">FAQs</a>
+        <a href="/login" id = "login-a"class = "seller-a">Login</a>
         <a href="/users/new" id = "sign-a"class = "seller-a">Signup</a>
         
     </div>
@@ -86,7 +98,16 @@
         <h1 id = "seller-head">Live The Life You Imagined</h1>
         <p id = "seller-para">Launch your business in 10 minutes</p>
         <%= image_tag 'beautiful.jpg', alt: 'logo',id:'backg' %> 
-        <a href = "add_products"><button id = "sell-butt">Start Selling</button></a>
+        <%if session[:current_user_id] == nil %>
+             <a href = "#"><button id = "sell-butt" onclick = "alterFunction()">Start Selling</button></a>
+        <%else%>
+            <a href = "add_products"><button id = "sell-butt">Start Selling</button></a>
+        <% end %>
     </div>
 </body>
 </html>
+<script>
+    function alterFunction(){
+        alert("please login first");
+    }
+</script>

@@ -103,6 +103,14 @@
         <span class="manager-profile-span1 mail-span"><%=@user_profile.email%></span>
         <div class="manager-profile1 contact-div">Contact</div>
         <span class="manager-profile-span1 contact-span"><%=@user_profile.phone_number%></span>
+        <%# <%User.where(id: current_user['id']).map do |item|%> %>
+
+        <%# <% User_address.joins(:user).where(id: item['user_id']).each do |user_item| %> %>
+        <%# <div id = "user-item"> %>
+            <%# <%= user_item.pincode%> %>
+        <%# </div> %>
+        <%# <%end%> %>
+        <%# <%end %> %>
     </div>
     </div>
 </div>
