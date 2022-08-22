@@ -50,3 +50,6 @@ Things you may want to cover:
 * Return orders : not started yet
 * Forget password : not started yet
 
+# EER Model:
+Screenshot (222).png
+
