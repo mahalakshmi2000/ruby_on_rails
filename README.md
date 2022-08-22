@@ -51,5 +51,6 @@ Things you may want to cover:
 * Forget password : not started yet
 
 # EER Model:
-Screenshot (222).png
+![Screenshot (222)](https://user-images.githubusercontent.com/82790009/185984290-d432a417-5bb3-4171-bfe5-eb520d8cbd9a.png)
+
 
