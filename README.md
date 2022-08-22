@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ... -->
 # Project Name - DECOROM
+### project link : https://decorom.herokuapp.com/home
 ### Tagline : Live The Life You Imagined
 # What is DECOROM:
 ###  It is basically an ecommerce website.  Especialy, it is useful for the people who are all interested to decorate their home. Here they can buy a product in affordable price.
@@ -48,3 +49,4 @@ Things you may want to cover:
 * Review : not started yet
 * Return orders : not started yet
 * Forget password : not started yet
+
