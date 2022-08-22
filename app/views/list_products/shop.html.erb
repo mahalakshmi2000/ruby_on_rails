@@ -111,9 +111,9 @@
 
 
         <%if session[:current_user_id] == nil %>
-            <button id = "cart-butt" onclick = "alterFunction()"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></button>
+            <button id = "cart-butt" onclick = "alterFunction()"><%= image_tag 'Shopping-cart.jpg', alt: 'logo', id:'cart' %></button>
         <%else%>
-             <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.png', alt: 'logo', id:'cart' %></a></button> 
+             <button id = "cart-butt"  onclick = "myFunction()"><a href="/cart_page/<%= blog['id'] %>"><%= image_tag 'Shopping-cart.jpg', alt: 'logo', id:'cart' %></a></button> 
         <% end %>
     </div>
     <% end %>
