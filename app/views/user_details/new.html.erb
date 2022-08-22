@@ -18,12 +18,13 @@
             <a href="#" id = "nav-a">Gifts</a>
             <a href="Gallery.html" id = "nav-a">wall Hanging</a>
             <div id = "address-div">
-                <a href = "user_details/new" id = "add-anger"> <i class="fa fa-map-marker" aria-hidden="true" style = "font-size: 25px;"></i>
-                <p id = "address-para">select your address</p></a>   
+                <a href = "seller_page" id = "add-anger"><p id = "address-para">Become a seller</p></a> 
             </div>
         </div>
         <div class="dropdown2">
             <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+            <% logged_user = User.find(session[:current_user_id]) %>
+            <label class="user-name" style="color:white" ><%= logged_user["user_name"] %></label>
             <div class = "dropdown-content2">
                 <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
                 <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
@@ -61,10 +62,10 @@
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
         <h2 class= "add-input">Add a new address</h2>
 
-        <label for="name" class= "add-input">Name</label><br>
+        <%# <label for="name" class= "add-input">Name</label><br>
         <input type="text" name="name" id="cname" class= "add-input"/>
         <label for="name" class= "add-input" id = "phonenum">phone number</label>
-        <input type="text" name="pnumber" id="pnum" class= "add-input"/><br>
+        <input type="text" name="pnumber" id="pnum" class= "add-input"/><br> %>
          <label for="lname" class= "add-input" id="pincode">Pin code</label><br>
         <input type="tel" name="address[pincode]" id="phone" class= "add-input"/>
         <label for="lname" class= "add-input" id = "landmark">Landmark</label>
@@ -91,7 +92,12 @@
             <option value="India">Office/Commercial(10pm - 6pm delivery)</option>
             
         </select><br> %>
-        <input type = "submit" id = "add-sub">
+        <a href = "/payments" onclick = "addressFunction()"><input type = "submit" id = "add-sub" ></a>
        
     </form>
 </body>
+<script>
+    addressFunction(){
+        alert("successfully added ")
+    }
+</script>

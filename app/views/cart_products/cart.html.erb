@@ -19,7 +19,7 @@
         <%if session[:current_user_id] == nil %>
            <button id = "buy-button" onclick="alterFuntion()">PROCCED TO PAY</button></a>
         <%else%>
-            <a href="user_addresses/new"><button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
+            <a href="user_details/new" onclick = "buyFuntion()"><button id = "buy-button" onclick="addPayment(<%= i%>,<%=cart_product.price%>)">PROCCED TO PAY</button></a>
         <% end %>
     </div>
     <%end %>
@@ -81,6 +81,8 @@
      function alterFuntion(){
         alert("please login first");
     }
-    
+    function buyFuntion(){
+        alert("select your address");
+    }
 </script>
 
