@@ -106,7 +106,7 @@
         <%if session[:current_user_id] == nil %>
             <a href="#"><button onclick = "alterFuntion()" id ="buy" >Buy now</button></a>
         <%else%>
-            <a href="user_addresses/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
+            <a href="/user_details/new"><button onclick = "buyFuntion()" id ="buy" >Buy now</button></a>
         <% end %>
 
 
