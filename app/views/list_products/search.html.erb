@@ -9,7 +9,7 @@
         <div id = "search-div">
             <form role="search" action="/search">
                 <input type="text" placeholder="Search.." id = "search" name="q" aria-label="Search">
-                <button type="submit" id = "icon"><i class="fa fa-search"></i></button>
+                <button type="submit" id = "icon"><em class="fa fa-search"></em></button>
             </form>
         </div>
         <div class="topnav">
@@ -27,11 +27,11 @@
     </div>
        <%if session[:current_user_id] == nil %>
             <div id = "cart-div">
-                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                <a href = "/cart_page"><em class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></em></a>
                 
             </div>
             <div class="dropdown2">
-                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                <button class = dropbtn2><em class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></em></button>
                 <div class = "dropdown-content2">
                     <h4 style = "margin-left: -36%;margin-bottom: 0;">Hello User</h4>
                     <p style = "margin-left:-35% ;margin-top:0">access your decorom account</p>
@@ -44,11 +44,11 @@
             </div>
         <%else%>
                 <div id = "cart-div">
-                <a href = "/cart_page"><i class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></i></a>
+                <a href = "/cart_page"><em class="fa fa-shopping-cart" style="font-size:25px ; color:#EEEEEE"></em></a>
                 
             </div>
             <div class="dropdown2">
-                <button class = dropbtn2><i class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></i></button>
+                <button class = dropbtn2><em class="fa fa-user-circle-o" style="font-size:25px; color:#EEEEEE" ></em></button>
                   <% logged_user = User.find(session[:current_user_id]) %>
                     <label class="user-name" style="color:white" ><%= logged_user["user_name"] %></label>
                 <div class = "dropdown-content2">

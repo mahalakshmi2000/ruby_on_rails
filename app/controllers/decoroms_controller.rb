@@ -17,7 +17,7 @@ class DecoromsController < ApplicationController
   #   render "add_products/add"
   # end
   def index
-    product_list = TrendingProduct.new
+    # @product_list = TrendingProduct.new
     @trending = TrendingProduct.all.map do |list|
       list
     end
