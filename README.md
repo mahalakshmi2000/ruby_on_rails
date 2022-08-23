@@ -46,6 +46,7 @@ Things you may want to cover:
 * Logout : Completed
 * search : Completed
 * User profile : Completed
+# Future plan :
 * Review : not started yet
 * Return orders : not started yet
 * Forget password : not started yet
