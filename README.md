@@ -33,23 +33,23 @@ Things you may want to cover:
 
 # My Features are :
 
-* Sign up : Completed
-* Login : Completed
-* Add products : Completed
-* List Products : Completed
-* Add customers address : Completed
-* Pagenation : Completed
-* Categories : Completed
-* Trending Produts: Completed
-* Payment method : Completed
-* Add to cart : Completed
-* Logout : Completed
-* search : Completed
-* User profile : Completed
+* Sign up 
+* Login 
+* Add products 
+* List Products 
+* Add customers address 
+* Pagenation 
+* Categories 
+* Trending Products
+* Payment method 
+* Add to cart
+* Logout
+* search
+* User profile
 # Future plan :
-* Review : not started yet
-* Return orders : not started yet
-* Forget password : not started yet
+* Review 
+* Return orders
+* Forget password
 
 # EER Model:
 ![Screenshot (222)](https://user-images.githubusercontent.com/82790009/185984290-d432a417-5bb3-4171-bfe5-eb520d8cbd9a.png)
