@@ -53,4 +53,11 @@ Things you may want to cover:
 # EER Model:
 ![Screenshot (222)](https://user-images.githubusercontent.com/82790009/185984290-d432a417-5bb3-4171-bfe5-eb520d8cbd9a.png)
 
+#Technical challenges and learning:
+Cart page:
+  Fixed duplicate values in cart page. Added additional programming logic and I fixed it.
+Pagy gem.
+   I used pagy gem for pagination .
+
+
 
