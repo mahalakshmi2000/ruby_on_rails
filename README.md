@@ -52,7 +52,8 @@ Things you may want to cover:
 * Forget password
 
 # EER Model:
-![Screenshot (222)](https://user-images.githubusercontent.com/82790009/185984290-d432a417-5bb3-4171-bfe5-eb520d8cbd9a.png)
+![err](https://user-images.githubusercontent.com/82790009/186085878-60edb111-537d-4c0f-8347-47d904ef55e9.png)
+
 
 # Technical challenges and learning:
 * Cart page:
