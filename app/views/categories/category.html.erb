@@ -90,9 +90,20 @@
                 <p id = "p-desc"><%= product.description%></p>
                 <p id = "p-rate">Rs:<%= product.price%></p>
                 <span class="striked-price"><s><%= product.actualprice%></s></span><br>
-                <button id ="buy">BUY NOW</button>
+                <a href="/user_details/new"></a><button id ="buy" onclick="buyFuntion()">BUY NOW</button></div></a>
                 <button id = "cart-butt"><%= image_tag 'Shopping-cart.jpg', alt: 'logo', id:'cart' %></button>
         </div>
         <% end %>
 </div> 
 </body>
+<script>
+    function myFunction() {
+        alert(" Item added to the cart ");
+    }
+    function buyFuntion(){
+        alert("select your address");
+    }
+    function alterFunction(){
+        alert("please login first");
+    }
+</script>
