@@ -26,10 +26,10 @@ Things you may want to cover:
 ### project link : https://decorom.herokuapp.com/home
 ### Tagline : Live The Life You Imagined
 # What is DECOROM:
-###  It is basically an ecommerce website.  Especialy, it is useful for the people who are all interested to decorate their home. Here they can buy a product in affordable price.
+###  Decorom is an ecommerce website.  Especialy, it is useful for the people who are all interested to decorate their home. Here they can buy a product in affordable price.
 
 # Why did I choose DECOROM ?  
-### Basically I like to decorate my home. So I visited some websites to buy products for my home. I was excited to do my own website to sell these kind of things.
+### Generally I like to decorate my home. So I visited some websites to buy products for my home. I was excited to do my own website to sell and buy these kind of things.
 
 # My Features :
 
