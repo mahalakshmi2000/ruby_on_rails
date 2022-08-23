@@ -31,7 +31,7 @@ Things you may want to cover:
 # Why did I choose DECOROM ?  
 ### Basically I like to decorate my home. So I visited some websites to buy products for my home. I was excited to do my own website to sell these kind of things.
 
-# My Features are :
+# My Features :
 
 * Sign up 
 * Login 
